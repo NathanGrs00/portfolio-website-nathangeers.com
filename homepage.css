@@ -1,0 +1,190 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+    --background-color: #242423;
+    --main-color: #333533;
+    --second-color: #f5cb5c;
+    --font-color: #e8eddf;
+    --font-color-hover: #cfdbd5;
+}
+
+/* Navigation Bar */
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--main-color);
+    padding-left: 5%;
+    padding-right: 5%;
+}
+#nameLogo{
+    font-size: 1.9rem;
+    color: var(--font-color);
+    width: 15%;
+}
+span{
+    color: var(--second-color);
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    font-size: 1.2rem;
+    display: inline;
+    padding: 1rem 2rem;
+}
+nav ul li a{
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 1s;
+}
+nav ul li a:hover{
+    color: var(--font-color-hover);
+    border-bottom: 0.2rem solid var(--second-color);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: .5s;
+}
+#barButton{
+    font-size: 1.2rem;
+    width: 15%;
+    border: none;
+    background: var(--font-color);
+    padding: 1rem;
+    border-radius: 3rem;
+    transition: .3s;
+}
+#barButton:hover{
+    color: var(--background-color);
+    background-color: var(--second-color);
+    transition: .3s;
+}
+/* Main Content One */
+.contentOne{
+    display: flex;
+    height: 27rem;
+    background-color: var(--background-color);
+}
+.leftDivOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.rightDivOne{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+.leftContentOne{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.rightContentOne{
+    filter: grayscale(90%);
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 40vh;
+}
+#contentButton{
+    font-size: 1.2rem;
+    width: 30%;
+    padding: 1rem;
+    border: none;
+    border-radius: 2rem;
+    background-color: var(--main-color);
+    color: var(--font-color);
+    transition: .5s;
+}
+#contentButton:hover{
+    background-color: var(--second-color);
+    color: var(--background-color);
+    transition: .3s;
+}
+#entryText{
+    color: var(--font-color);
+    font-size: 3rem;
+    width: 100%;
+}
+
+/* Main Content Two */
+.contentTwo{
+    display: flex;
+    height: 27rem;
+    background-color: var(--main-color);
+}
+.leftDivTwo{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    height: 100%;
+}
+.rightDivTwo{
+    display: flex;
+    align-items: center;
+    width: 50%;
+}
+.rightContentTwo{
+    padding: 2rem;
+    color: var(--font-color);
+}
+.leftContentTwo{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius: 0.5rem;
+    background-color: var(--background-color);
+    height: 80%;
+    width: 35%;
+}
+svg{
+    width: 40%;
+    display: block;
+    margin: auto;
+}
+.hiddenText{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 1s;
+}
+.hiddenText > p{
+    color: var(--font-color);
+    padding: 1.5rem;
+}
+.hiddenText:hover{
+    opacity: 1;
+    transition: .5s;
+}
+.rightContentTwo > h3{
+    color: var(--second-color);
+    font-size: 1.7rem;
+}
+.rightContentTwo > p{
+    font-size: 1.2rem;
+}
+.rightContentTwo > h4{
+    font-size: 1.4rem;
+}
