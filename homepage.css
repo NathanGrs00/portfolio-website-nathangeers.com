@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 body{
     margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: Roboto, sans-serif;
+    font-family: Poppins, Roboto, sans-serif;
     --background-color: #242423;
     --main-color: #333533;
     --second-color: #f5cb5c;
     --font-color: #e8eddf;
     --font-color-hover: #cfdbd5;
 }
-
+button{
+    font-family: inherit;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
 /* Navigation Bar */
 nav{
     display: flex;
@@ -60,13 +65,13 @@ nav ul li a:hover{
 }
 #barButton:hover{
     color: var(--background-color);
-    background-color: var(--second-color);
+    background-color: var(--font-color-hover);
     transition: .3s;
 }
 /* Main Content One */
 .contentOne{
     display: flex;
-    height: 27rem;
+    height: 26rem;
     background-color: var(--background-color);
 }
 .leftDivOne{
@@ -82,6 +87,7 @@ nav ul li a:hover{
     width: 50%;
 }
 .leftContentOne{
+    margin-left: 5rem;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -132,7 +138,7 @@ nav ul li a:hover{
     width: 50%;
 }
 .rightContentTwo{
-    padding: 2rem;
+    padding: 5rem;
     color: var(--font-color);
 }
 .leftContentTwo{
@@ -148,6 +154,7 @@ nav ul li a:hover{
     position: relative;
     border-radius: 0.5rem;
     background-color: var(--background-color);
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
     height: 80%;
     width: 35%;
 }
@@ -180,11 +187,117 @@ svg{
 }
 .rightContentTwo > h3{
     color: var(--second-color);
-    font-size: 1.7rem;
-}
-.rightContentTwo > p{
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 .rightContentTwo > h4{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
+}
+
+/*Section Three*/
+.sectionExpProject{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 27rem;
+    background-color: var(--background-color);
+}
+.featuredBlock{
+    width: 50%;
+    height: 80%;
+    background-color: var(--main-color);
+}
+.homeImage{
+    width: 30%;
+    height: 80%;
+    background-color: var(--main-color);
+}
+
+/*Section Four*/
+#sectionProject{
+    background-color: var(--main-color);
+}
+#sectionProject > .featuredBlock{
+    background-color: var(--background-color);
+}
+#sectionProject > .homeImage{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border: var(--second-color) solid .2rem;
+    border-radius: 2rem;
+}
+#sectionProject > .homeImage > img{
+    flex-shrink: 0;
+    object-fit: cover;
+    width: 100%;
+}
+.featuredBlock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blockText{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 80%;
+    padding: 2.3rem;
+    color: var(--font-color);
+}
+.blockText > h4{
+    color: var(--second-color);
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.blockText > button{
+    border: none;
+    border-radius: 2rem;
+    height: 2.5rem;
+}
+.blockText >button:hover{
+    background-color: var(--font-color-hover);
+}
+.blockSkills{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+.skillBox{
+    background-color: var(--main-color);
+    width: 80%;
+    height: 80%;
+    border-radius: 1rem;
+}
+.skillBox > h3{
+    margin-left: 1rem;
+    margin-bottom: 0;
+    color: var(--font-color);
+}
+.skillBox > hr{
+    color: var(--font-color);
+    width: 90%;
+}
+.skillsField{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: .6rem;
+}
+.skill{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--second-color);
+    color: var(--background-color);
+    font-weight: 700;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+    height: 2rem;
+    padding-left: .5rem;
+    padding-right: .5rem;
+    margin: 0.3rem;
+    width: fit-content;
+    flex-basis: content;
 }
