@@ -7,31 +7,27 @@
 </head>
 <body>
     <nav>
-        <h2 id="nameLogo">Nathan <span>Geers</span></h2>
+        <h2 onclick="location.href='index.html'" class="nameLogo">Nathan<span>Geers</span></h2>
         <ul>
-            <li><a href="#">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Experience</a></li>
             <li><a href="#">CV</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="projects.html">Projects</a></li>
         </ul>
-        <button id="barButton">Contact</button>
+        <button id="navButton">Contact</button>
     </nav>
-    <div class="contentOne">
-        <div class="leftDivOne">
-            <div class="leftContentOne">
-                <h2 id="entryText">Hi, <br> My name is <span>Nathan</span>.<br>Welcome to my website!</h2>
-                <button id="contentButton">Get in contact</button>
-            </div>
+    <div class="sectionWelcome">
+        <div class="welcomeDivLeft">
+            <h2 id="entryText">Hi, <br> My name is <span>Nathan</span>.<br>Welcome to my website!</h2>
+            <button class="contentButton">Get in contact</button>
         </div>
-        <div class="rightDivOne">
-            <div class="rightContentOne">
-                <img alt="Photo of Nathan Geers" src="img/6606-male-user.png"/>
-            </div>
+        <div class="welcomeDivRight">
+            <img alt="Photo of Nathan Geers" src="img/6606-male-user.png"/>
         </div>
     </div>
-    <div class="contentTwo">
-        <div class="leftDivTwo">
-            <div class="leftContentTwo">
+    <div class="sectionBio">
+        <div class="bioDivLeft">
+            <div class="bioHoverCubes">
                 <div class="icons">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                         <path fill="#f5cb5c" d="M52.203 9.61c-5.3 1.18-10.543 2.816-15.457 5.292c.113 4.34.395 8.496.961 12.72c-1.906 1.222-3.914 2.273-5.695 3.702c-1.813 1.395-3.66 2.727-5.301 4.36a102 102 0 0 0-10.316-6.004C12.543 33.824 8.94 38.297 6 43.305c2.313 3.629 4.793 7.273 7.086 10.117v30.723q.087 0 .168.007L32.09 85.97a2.03 2.03 0 0 1 1.828 1.875l.582 8.316l16.426 1.172l1.133-7.672a2.03 2.03 0 0 1 2.007-1.734h19.868a2.03 2.03 0 0 1 2.007 1.734l1.133 7.672l16.43-1.172l.578-8.316a2.03 2.03 0 0 1 1.828-1.875l18.828-1.817q.082-.007.168-.007V81.69h.008V53.42c2.652-3.335 5.16-7.019 7.086-10.116c-2.941-5.008-6.543-9.48-10.395-13.625a102 102 0 0 0-10.316 6.004c-1.64-1.633-3.488-2.965-5.3-4.36c-1.782-1.43-3.79-2.48-5.696-3.703c.566-4.223.848-8.379.96-12.719c-4.913-2.476-10.155-4.113-15.456-5.293c-2.117 3.559-4.055 7.41-5.738 11.176c-2-.332-4.008-.457-6.02-.48V20.3l-.039.004c-.016.002-.023-.004-.04-.004v.004c-2.01.023-4.019.148-6.019.48c-1.683-3.765-3.62-7.617-5.738-11.176zM37.301 54.55c6.27 0 11.351 5.079 11.351 11.345c0 6.27-5.082 11.351-11.351 11.351c-6.266 0-11.348-5.082-11.348-11.351c0-6.266 5.082-11.344 11.348-11.344zm53.398 0c6.266 0 11.348 5.079 11.348 11.345c0 6.27-5.082 11.351-11.348 11.351c-6.27 0-11.351-5.082-11.351-11.351c0-6.266 5.082-11.344 11.351-11.344zM64 61.189c2.016 0 3.656 1.488 3.656 3.32v10.449c0 1.832-1.64 3.32-3.656 3.32c-2.02 0-3.652-1.488-3.652-3.32v-10.45c0-1.831 1.632-3.32 3.652-3.32zm0 0"/>
@@ -51,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="leftContentTwo">
+            <div class="bioHoverCubes">
                 <div class="icons">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path fill="#f5cb5c" d="M5.08 0h1.082v1.069h.99V0h1.082v3.236H7.152V2.153h-.99v1.083H5.081zm4.576 1.073h-.952V0h2.987v1.073h-.953v2.163H9.656zM12.165 0h1.128l.694 1.137L14.68 0h1.128v3.236h-1.077V1.632l-.744 1.151h-.019l-.745-1.15v1.603h-1.058zm4.181 0h1.083v2.167h1.52v1.07h-2.603z"/>
@@ -71,11 +67,12 @@
                 </div>
             </div>
         </div>
-        <div class="rightDivTwo">
-            <div class="rightContentTwo">
+        <div class="bioDivRight">
+            <div class="divRightText">
                 <h3>A student software developer with an eagerness to learn new things.</h3>
                 <p>
-                    As I grew up, I believe I changed a lot. However, one thing remained a constant throughout the last years:<br>
+                    As I grew up, I believe I changed a lot. <br>
+                    However, one thing remained a constant throughout the last years:<br>
                     Spending a lot of time behind a computer. <br>
                     Whether it was through gaming, game development, editing or making videos or my recent curiosity and career choice towards software development.<br>
                     On this website, I am excited to show you the projects that I've worked on. If you have any questions, be sure to contact me without hesitation!
@@ -85,10 +82,31 @@
         </div>
     </div>
     <div class="sectionExpProject">
-        <div class="featuredBlock"></div>
-        <div class="homeImage"></div>
+        <div class="homeImage">
+            <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
+        </div>
+        <div class="featuredBlock">
+            <div class="blockText">
+                <h4>Work Experience:</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut culpa dolore dolorum eius eos facilis in, mollitia nam necessitatibus nemo nulla quae reprehenderit sequi voluptatum! Magni, non, voluptatibus. Accusamus?</p>
+                <button>View More!</button>
+            </div>
+            <div class="blockSkills">
+                <div class="skillBox">
+                    <h3>Skills used:</h3>
+                    <hr>
+                    <div class="skillsField">
+                        <div class="skill">HTML</div>
+                        <div class="skill">Javascript</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="sectionExpProject" id="sectionProject">
+        <div class="homeImage">
+            <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
+        </div>
         <div class="featuredBlock">
             <div class="blockText">
                 <h4>Featured Project:</h4>
@@ -105,9 +123,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="homeImage">
-            <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
         </div>
     </div>
 </body>
