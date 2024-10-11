@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>My Projects | Nathan Geers</title>
     <link rel="stylesheet" href="projects.css">
+    <script src="showcontent.js"></script>
 </head>
 <body>
     <nav>
@@ -68,7 +69,21 @@
             <hr class="projectBreak">
             <div class="addProjects">
                 <h2 onclick="location.href='index.html'" class="nameLogo">Nathan <span>Geers</span></h2>
-                <button class="contentButton">Add Projects</button>
+                <button class="contentButton" onclick="showContent()">Add Projects</button>
+            </div>
+        </div>
+        <div class="popUpMenu" id="popUpMenu">
+            <div class="popUpBox">
+                <h2>Login to add projects:</h2>
+                <form action="checkpassword.php" method="POST">
+                    <div class="popUpForm">
+                        <label for="password">Password:</label><input id="password" type="password" name="password">
+                    </div>
+                    <div class="popUpButton">
+                        <button class="passwordButton" onclick="location.href='checkpassword.php'">Log In</button>
+                    </div>
+                </form>
+                <button class="passwordButton" onclick="location.href='projects.html'">Go Back</button>
             </div>
         </div>
     </div>

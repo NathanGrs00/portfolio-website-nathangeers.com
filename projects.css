@@ -44,7 +44,6 @@ h1{
     height: 16.5rem;
     align-self: center;
 }
-
 .addProjects{
     display: flex;
     align-items: center;
@@ -57,4 +56,44 @@ h1{
     width: 10rem;
     padding: 0;
     margin: 0;
+}
+.popUpMenu{
+    position: absolute;
+    visibility: hidden;
+}
+.popUpBox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--font-color);
+    border-radius: 5%;
+    width: 40rem;
+    height: 25rem;
+    font-size: 1.2rem;
+}
+.popUpForm{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+.popUpButton{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 5rem;
+    margin-top: 1rem;
+}
+.passwordButton{
+    background-color: var(--background-color);
+    color: var(--font-color);
+    width: 20rem;
+    height: 3rem;
+    border-radius: 10rem;
+}
+#password{
+    width: 10rem;
+    height: 1.5rem;
+    margin-left: 3rem;
 }
