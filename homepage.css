@@ -28,7 +28,7 @@ nav{
     background-color: var(--background-color);
     padding-left: 5%;
     padding-right: 5%;
-    box-shadow: 0 1px 20px var(--second-color);
+    box-shadow: 0 .1rem 1.5rem var(--second-color);
 }
 .nameLogo{
     display: flex;
