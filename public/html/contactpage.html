@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me | Nathan Geers </title>
+    <link rel="stylesheet" href="../css/contactpage.css">
+</head>
+<body>
+    <nav>
+        <h2 onclick="location.href='../../index.html'" class="nameLogo">Nathan <span>Geers</span></h2>
+        <ul>
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="#">Experience</a></li>
+            <li><a href="#">CV</a></li>
+            <li><a href="projects.html">Projects</a></li>
+        </ul>
+        <button id="navButton" onclick="location.href='contactpage.html'">Contact</button>
+    </nav>
+    <div class="wrapper">
+        <div id="formDiv">
+            <div id="formText">
+                <h1>Start a <span>project</span><br>with me.</h1>
+                <div>
+                    <h2>Contact</h2>
+                    <p>nathangeers2@gmail.com</p>
+                </div>
+            </div>
+            <form>
+                <h2>Contact Me:</h2>
+                <label for="initials">Intitials: </label><input type="text" id="initials" name="initials">
+                <label for="lastName">Last Name: </label><input type="text" id="lastName" name="lastName">
+                <label for="phoneNumber">Phone number: </label><input type="text" id="phoneNumber" name="phoneNumber">
+                <label for="email">Email address: </label><input type="email" id="email" name="email">
+                <label for="details">Optional details: </label><textarea id="details"></textarea>
+                <input type="submit" value="Send Information">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
