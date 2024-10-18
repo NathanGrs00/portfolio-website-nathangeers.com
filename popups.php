@@ -1,5 +1,6 @@
 <?php
-require_once 'checkempty.class.php' ?>
+require_once 'checkempty.class.php'
+?>
 <!doctype html>
 <html lang="en">
 <head>
