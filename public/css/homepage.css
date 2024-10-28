@@ -123,6 +123,7 @@ nav > ul > li > a:hover{
 .contentButton:hover{
     background-color: var(--second-color);
     color: var(--background-color);
+    transform: scale(1.1);
     transition: .3s;
 }
 #entryText{

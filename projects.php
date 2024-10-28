@@ -1,3 +1,8 @@
+<?php
+require_once 'project.class.php';
+require_once 'projecthandler.class.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +10,19 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>My Projects | Nathan Geers</title>
-    <link rel="stylesheet" href="../css/projects.css">
-    <script src="../javascript/showcontent.js"></script>
+    <link rel="stylesheet" href="public/css/projectsheet.css">
+    <script src="public/javascript/showcontent.js"></script>
 </head>
 <body id="body">
     <nav>
-        <h2 onclick="location.href='../../index.html'" class="nameLogo">Nathan <span>Geers</span></h2>
+        <h2 onclick="location.href='index.html'" class="nameLogo">Nathan <span>Geers</span></h2>
         <ul>
-            <li><a href="../../index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="#">Experience</a></li>
             <li><a href="#">CV</a></li>
-            <li><a href="projects.html">Projects</a></li>
+            <li><a href="projects.php">Projects</a></li>
         </ul>
-        <button id="navButton" onclick="location.href='contactpage.html'">Contact</button>
+        <button id="navButton" onclick="location.href='public/html/contactpage.html'">Contact</button>
     </nav>
     <div class="wrapper">
         <div class="projectsMain">
@@ -42,7 +47,7 @@
                     </div>
                 </div>
                 <div class="homeImage">
-                    <img src="../../img/Project1Website.png" alt="Screenshot of Portfolio website.">
+                    <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
                 </div>
             </div>
             <hr class="projectBreak">
@@ -65,10 +70,16 @@
                     </div>
                 </div>
                 <div class="homeImage">
-                    <img src="../../img/Project1Website.png" alt="Screenshot of Portfolio website.">
+                    <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
                 </div>
             </div>
             <hr class="projectBreak">
+            <?php
+            $showProjects = new ProjectHandler();
+                foreach ($_SESSION['projects'] as $project){
+                    $showProjects->projectShow($project->getTitle(), $project->getDescription(), $project->getSkills());
+                }
+            ?>
             <div class="addProjects">
                 <h2 onclick="location.href='index.html'" class="nameLogo">Nathan <span>Geers</span></h2>
                 <button class="contentButton" onclick="showContent('popUpMenu')">Add Projects</button>
@@ -77,7 +88,7 @@
         <div class="popUpMenu" id="popUpMenu">
             <div class="popUpBox">
                 <h2>Login to add projects:</h2>
-                <form action="../../popups.php" method="POST">
+                <form action="popups.php" method="POST">
                     <div class="popUpForm">
                         <label for="password">Password:</label><input id="password" type="password" placeholder="Enter your password here..." name="password">
                     </div>
@@ -85,7 +96,7 @@
                         <button class="passwordButton" onclick="location.href='checkpassword.php'">Log In</button>
                     </div>
                 </form>
-                <button class="passwordButton" onclick="location.href='projects.html'">Go Back</button>
+                <button class="passwordButton" onclick="location.href='projects.php'">Go Back</button>
             </div>
         </div>
     </div>
