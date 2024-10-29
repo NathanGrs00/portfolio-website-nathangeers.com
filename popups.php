@@ -1,5 +1,15 @@
 <?php
-require_once 'checkempty.class.php'
+require_once 'errorhandler.class.php';
+require_once 'checkempty.class.php';
+
+$content = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $password = new EmptyChecker();
+    $content = $password->checkEmpty();
+}
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -14,8 +24,12 @@ require_once 'checkempty.class.php'
         <div class="featuredBlock">
             <div class="popUpDiv">
                 <?php
-                $isempty = new EmptyChecker();
-                $isempty->checkEmpty();
+                if (!empty($content)) {
+                    echo $content;
+                } else {
+                    $errorMessage = new ErrorHandler();
+                    echo $errorMessage->showError('Oops, something went wrong!');
+                }
                 ?>
             </div>
         </div>

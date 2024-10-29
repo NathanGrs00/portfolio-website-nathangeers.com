@@ -10,7 +10,8 @@
 <body>
     <div class="wrapper" id="wrapper">
         <h2>Add a project</h2>
-        <form action="main.php" method="POST">
+        <form action="main.php" method="POST" enctype="multipart/form-data">
+
             <label for="title">Title: </label><input type="text" id="title" name="title">
             <label for="description">Description: </label><textarea id="description" name="description"></textarea>
             <div id="skillsBox">
@@ -42,7 +43,7 @@
                     </div>
                 </div>
             </div>
-            <label for="image">Image: </label><input type="file" id="image">
+            <label for="image">Image: </label><input type="file" id="image" name="image">
             <div id="buttonDiv">
                 <button type="submit" name="Submit">Add Project</button>
                 <button onclick="document.href='projects.php'">Go Back</button>

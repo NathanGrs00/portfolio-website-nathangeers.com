@@ -67,3 +67,7 @@ select{
     justify-content: space-between;
     margin-top: 2rem;
 }
+
+#editSkills{
+    max-width: 25rem;
+}

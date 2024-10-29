@@ -1,3 +1,14 @@
+<?php
+require_once 'project.class.php';
+session_start();
+
+if (!isset($_SESSION['projects'])) {
+    $_SESSION['projects'] = array();
+    $_SESSION['projects'][] = new Project("1", "Portfolio Website", "In the first semester of my software development study, I made the portfolio website you are currently viewing. It has features to contact the owner and view, add or edit projects", array('HTML','CSS','JavaScript','PHP'), "img/Project1Website.png");
+    $_SESSION['projects'][] = new Project("2", "Gym Website", "I made a website for a local gym, they needed a way for new members to register through a form and for them to see the amount of members that have applied.", array('HTML','CSS','PHP'), "img/StockPhotoGym1.jpg");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,9 +20,9 @@
 </head>
 <body>
     <nav>
-        <h2 onclick="location.href='index.html'" class="nameLogo">Nathan<span>Geers</span></h2>
+        <h2 onclick="location.href='index.php'" class="nameLogo">Nathan<span>Geers</span></h2>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#">Experience</a></li>
             <li><a href="#">CV</a></li>
             <li><a href="projects.php">Projects</a></li>
@@ -83,49 +94,45 @@
             </div>
         </div>
     </div>
-    <div class="sectionExpProject">
+    <?php
+    // Function to display the most recent project
+    function displayMostRecentProject() {
+        if(!isset($_SESSION['projects'])) {
+            echo "<p>No projects available.</p>"; // Message if no projects are in the session
+            exit();
+        }
+        // Get the last project (most recently added)
+        $mostRecentProject = end($_SESSION['projects']); // end() gets the last element
+        ?>
+
+        <div class="sectionExpProject">
         <div class="homeImage">
-            <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
+            <img src="<?php echo $mostRecentProject->getImage(); ?>" alt="Screenshot of <?php echo $mostRecentProject->getTitle(); ?>.">
         </div>
         <div class="featuredBlock">
             <div class="blockText">
-                <h4>Work Experience:</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut culpa dolore dolorum eius eos facilis in, mollitia nam necessitatibus nemo nulla quae reprehenderit sequi voluptatum! Magni, non, voluptatibus. Accusamus?</p>
-                <button>View More!</button>
+                <h4>Featured Project: <?php echo $mostRecentProject->getTitle(); ?></h4>
+                <p><?php echo $mostRecentProject->getDescription(); ?></p>
+                <button onclick="location.href='projects.php'">View More!</button>
             </div>
             <div class="blockSkills">
                 <div class="skillBox">
                     <h3>Skills used:</h3>
                     <hr>
                     <div class="skillsField">
-                        <div class="skill">HTML</div>
-                        <div class="skill">Javascript</div>
+                        <?php foreach ($mostRecentProject->getSkills() as $skill): ?>
+                        <div class="skill"><?php echo $skill; ?></div>
+                        <?php endforeach; ?>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="sectionExpProject" id="sectionProject">
-        <div class="homeImage">
-            <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
         </div>
-        <div class="featuredBlock">
-            <div class="blockText">
-                <h4>Featured Project:</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut culpa dolore dolorum eius eos facilis in, mollitia nam necessitatibus nemo nulla quae reprehenderit sequi voluptatum! Magni, non, voluptatibus. Accusamus?</p>
-                <button>View More!</button>
-            </div>
-            <div class="blockSkills">
-                <div class="skillBox">
-                    <h3>Skills used:</h3>
-                    <hr>
-                    <div class="skillsField">
-                        <div class="skill">HTML</div>
-                        <div class="skill">Javascript</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    <?php
+    }
+    // Call the function to display the most recent project
+    displayMostRecentProject();
+    ?>
 </body>
 </html>

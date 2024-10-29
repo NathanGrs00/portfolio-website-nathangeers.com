@@ -205,7 +205,7 @@ svg{
     font-size: 1.2rem;
 }
 
-/*Section Three & Four*/
+/*Section Three*/
 .sectionExpProject{
     display: flex;
     justify-content: space-evenly;
@@ -213,17 +213,8 @@ svg{
     height: 35rem;
     background-color: var(--background-color);
 }
-#sectionProject{
-    align-items: start;
-    height: 25rem;
-}
 .featuredBlock{
     width: 55%;
-    height: 23rem;
-    background-color: var(--main-color);
-}
-.homeImage{
-    width: 30%;
     height: 23rem;
     background-color: var(--main-color);
 }
@@ -232,11 +223,14 @@ svg{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    width: 30%;
+    height: 23rem;
+    background-color: var(--main-color);
     border: var(--second-color) solid .2rem;
     border-radius: 2rem;
 }
 .homeImage > img{
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
 }
 .featuredBlock{

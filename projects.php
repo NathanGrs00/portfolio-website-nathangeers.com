@@ -15,9 +15,9 @@ session_start();
 </head>
 <body id="body">
     <nav>
-        <h2 onclick="location.href='index.html'" class="nameLogo">Nathan <span>Geers</span></h2>
+        <h2 onclick="location.href='index.php'" class="nameLogo">Nathan <span>Geers</span></h2>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="#">Experience</a></li>
             <li><a href="#">CV</a></li>
             <li><a href="projects.php">Projects</a></li>
@@ -28,72 +28,28 @@ session_start();
         <div class="projectsMain">
             <h1>My Projects:</h1>
             <hr class="projectBreak">
-            <div class="projectObject">
-                <div class="featuredBlock">
-                    <div class="blockText">
-                        <h4>Project One:</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut culpa dolore dolorum eius eos facilis in, mollitia nam necessitatibus nemo nulla quae reprehenderit sequi voluptatum! Magni, non, voluptatibus. Accusamus?</p>
-                        <button>Edit</button>
-                    </div>
-                    <div class="blockSkills">
-                        <div class="skillBox">
-                            <h3>Skills used:</h3>
-                            <hr>
-                            <div class="skillsField">
-                                <div class="skill">HTML</div>
-                                <div class="skill">Javascript</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="homeImage">
-                    <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
-                </div>
-            </div>
-            <hr class="projectBreak">
-            <div class="projectObject">
-                <div class="featuredBlock">
-                    <div class="blockText">
-                        <h4>Project Two:</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores aut culpa dolore dolorum eius eos facilis in, mollitia nam necessitatibus nemo nulla quae reprehenderit sequi voluptatum! Magni, non, voluptatibus. Accusamus?</p>
-                        <button>Edit</button>
-                    </div>
-                    <div class="blockSkills">
-                        <div class="skillBox">
-                            <h3>Skills used:</h3>
-                            <hr>
-                            <div class="skillsField">
-                                <div class="skill">HTML</div>
-                                <div class="skill">Javascript</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="homeImage">
-                    <img src="img/Project1Website.png" alt="Screenshot of Portfolio website.">
-                </div>
-            </div>
-            <hr class="projectBreak">
             <?php
             $showProjects = new ProjectHandler();
-                foreach ($_SESSION['projects'] as $project){
-                    $showProjects->projectShow($project->getTitle(), $project->getDescription(), $project->getSkills());
-                }
+            foreach ($_SESSION['projects'] as $project){
+                $showProjects->projectShow($project->getId(), $project->getTitle(), $project->getDescription(), $project->getSkills(), $project->getImage());
+            }
             ?>
             <div class="addProjects">
-                <h2 onclick="location.href='index.html'" class="nameLogo">Nathan <span>Geers</span></h2>
-                <button class="contentButton" onclick="showContent('popUpMenu')">Add Projects</button>
+                <h2 onclick="location.href='index.php'" class="nameLogo">Nathan <span>Geers</span></h2>
+                <button class="contentButton" onclick="showContent('popUpMenu', 'add')">Add Projects</button>
             </div>
         </div>
         <div class="popUpMenu" id="popUpMenu">
             <div class="popUpBox">
                 <h2>Login to add projects:</h2>
                 <form action="popups.php" method="POST">
+                    <input type="hidden" name="action" id="actionInput" value="add">
                     <div class="popUpForm">
-                        <label for="password">Password:</label><input id="password" type="password" placeholder="Enter your password here..." name="password">
+                        <label for="password">Password:</label>
+                        <input id="password" type="password" placeholder="Enter your password here..." name="password">
                     </div>
                     <div class="popUpButton">
-                        <button class="passwordButton" onclick="location.href='checkpassword.php'">Log In</button>
+                        <button class="passwordButton" onclick="location.href='checkempty.class.php'">Log In</button>
                     </div>
                 </form>
                 <button class="passwordButton" onclick="location.href='projects.php'">Go Back</button>
