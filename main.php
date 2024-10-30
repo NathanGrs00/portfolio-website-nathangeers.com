@@ -24,4 +24,6 @@ if ($isValid->validateForm("project")) {
     $singleProject = new Project($id, $_POST["title"], $_POST["description"], $_POST["checks"], $destinationPath);
     $_SESSION['projects'][] = $singleProject;
     header('Location: projects.php');
+}else{
+    header('Location: popups.php');
 }

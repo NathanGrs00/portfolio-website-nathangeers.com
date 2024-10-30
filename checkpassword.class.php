@@ -1,5 +1,4 @@
 <?php
-require_once 'updateprojects.php';
 class PasswordChecker
 {
     private $password;
@@ -23,7 +22,7 @@ class PasswordChecker
                 exit();
             } elseif ($this->action === 'edit') {
                 // Handle editing a specific project.
-                $projectId = $_POST['projectId'] ?? ''; // Get the project ID if editing
+                $projectId = $_POST['projectID']; // Get the project ID if editing
                 header("Location: editproject.php?id={$projectId}");
                 exit();
             }

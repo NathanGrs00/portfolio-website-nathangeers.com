@@ -1,6 +1,6 @@
 <?php
-require_once 'project.class.php';
 require_once 'projecthandler.class.php';
+require_once 'project.class.php';
 session_start();
 ?>
 <!DOCTYPE html>
