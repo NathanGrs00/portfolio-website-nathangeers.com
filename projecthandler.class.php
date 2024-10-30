@@ -1,5 +1,5 @@
 <?php
-class ProjectHandler {
+class ProjectHandler{
     public function projectShow($id, $title, $description, $skills, $image) {
         $projectProperty = new Project($id, $title, $description, $skills, $image);
         echo '<div class="projectObject">';

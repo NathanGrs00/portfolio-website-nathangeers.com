@@ -4,10 +4,10 @@ require_once 'errorhandler.class.php';
 session_start();
 
 // Retrieve POST data
-$projectID = $_POST['projectID'] ?? null;
-$title = $_POST['title'] ?? '';
-$description = $_POST['description'] ?? '';
-$skills = $_POST['checks'] ?? []; // 'checks' contains selected skills from checkboxes
+$projectID = $_POST['projectID'];
+$title = $_POST['title'];
+$description = $_POST['description'];
+$skills = $_POST['checks']; // 'checks' contains selected skills from checkboxes
 
 $imagePath = null;
 

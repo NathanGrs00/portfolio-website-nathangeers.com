@@ -97,10 +97,6 @@ if (!isset($_SESSION['projects'])) {
     <?php
     // Function to display the most recent project
     function displayMostRecentProject() {
-        if(!isset($_SESSION['projects'])) {
-            echo "<p>No projects available.</p>"; // Message if no projects are in the session
-            exit();
-        }
         // Get the last project (most recently added)
         $mostRecentProject = end($_SESSION['projects']); // end() gets the last element
         ?>

@@ -5,8 +5,8 @@
     $selectedProject = null;
 
 // Find the project in the session array
-foreach ($_SESSION['projects'] as $project) {
-    if ($project->getId() == $id) {
+foreach ($_SESSION['projects'] as $project){
+    if ($project->getId() == $id){
         $selectedProject = $project;
         break;
     }
@@ -45,8 +45,6 @@ if (!$selectedProject) {
 
             // Retrieve skills used by this project as an array
             $usedSkills = $project->getSkills(); // Assuming this returns an array of skills
-
-            // Loop through all skills and output checkboxes, marking those in $usedSkills as checked
             ?>
             <div id="skillsBox">
                 <p>Skills: </p>
@@ -62,6 +60,10 @@ if (!$selectedProject) {
             <div id="buttonDiv">
                 <button type="submit">Update Project</button>
             </div>
+        </form>
+        <form method="post" action="deleteproject.php">
+            <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
+            <button type="submit" onclick="return confirm('Are you sure you want to delete this project?');">Delete Project</button>
         </form>
     </div>
 </body>
