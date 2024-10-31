@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="../css/contactpage.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="../javascript/emailjs.js"></script>
-    <script src="../javascript/showcontent.js"></script>
 </head>
 <body>
     <nav>
@@ -28,22 +27,15 @@
                     <p>nathangeers2@gmail.com</p>
                 </div>
             </div>
-            <form id="contactForm">
+            <form id="contactForm" action="../../submitform.php" method="POST">
                 <h2>Contact Me:</h2>
-                <label for="initials">Intitials: </label><input type="text" id="initials" name="initials">
-                <label for="lastName">Last name: </label><input type="text" id="lastName" name="lastName">
-                <label for="phoneNumber">Phone number: </label><input type="text" id="phoneNumber" name="phoneNumber">
-                <label for="email">Email address: </label><input type="email" id="email" name="email">
+                <label for="initials">Intitials: </label><input type="text" id="initials" name="initials" required>
+                <label for="lastName">Last name: </label><input type="text" id="lastName" name="lastName" required>
+                <label for="phoneNumber">Phone number: </label><input type="text" id="phoneNumber" name="phoneNumber" required>
+                <label for="email">Email address: </label><input type="email" id="email" name="email" required>
                 <label for="details">Optional details: </label><textarea id="details" name="details"></textarea>
-                <input type="submit" value="Send Information" onclick="showContent('popUpMenu')">
+                <input type="submit" value="Send Information">
             </form>
-        </div>
-        <div id="popUpMenu">
-            <div id="popUpDiv">
-                <h2>Succes!</h2>
-                <p>Your details have been sent.<br> I will get in contact with you shortly</p>
-                <button onclick="location.href='../../index.php'">Back to Home</button>
-            </div>
         </div>
     </div>
 </body>

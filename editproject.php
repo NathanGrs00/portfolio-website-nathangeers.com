@@ -1,8 +1,11 @@
 <?php
-    require_once 'project.class.php';
-    session_start();
-    $id = $_GET['id'];
-    $selectedProject = null;
+require_once 'project.class.php';
+require_once 'errorhandler.class.php';
+session_start();
+
+$id = $_GET['id'];
+$selectedProject = null;
+$errorMessage = new ErrorHandler();
 
 // Find the project in the session array
 foreach ($_SESSION['projects'] as $project){
@@ -12,9 +15,9 @@ foreach ($_SESSION['projects'] as $project){
     }
 }
 
-if (!$selectedProject) {
+if (!$selectedProject){
     // Handle project not found
-    echo "Project not found.";
+    echo $errorMessage->showError("Project not found.");
     exit();
 }
 
@@ -44,7 +47,7 @@ if (!$selectedProject) {
             $allSkills = ['HTML', 'PHP', 'CSS', 'JavaScript', 'Python', 'Java', 'SQL', 'C#', 'GDScript', 'Shell'];
 
             // Retrieve skills used by this project as an array
-            $usedSkills = $project->getSkills(); // Assuming this returns an array of skills
+            $usedSkills = $project->getSkills();
             ?>
             <div id="skillsBox">
                 <p>Skills: </p>

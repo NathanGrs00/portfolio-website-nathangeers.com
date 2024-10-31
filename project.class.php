@@ -1,5 +1,4 @@
 <?php
-
 class Project{
     private $id;
     private $title;
@@ -7,7 +6,7 @@ class Project{
     private $skills;
     private $image;
 
-    public function __construct($id, $title, $description, $skills, $image = null){
+    public function __construct($id, $title, $description, $skills, $image){
         $this->id = $id;
         $this->title = $title;
         $this->description = $description;
