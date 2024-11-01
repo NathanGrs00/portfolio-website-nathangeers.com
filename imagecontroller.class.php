@@ -1,26 +1,27 @@
 <?php
 require_once 'errorhandler.class.php';
 class ImageController{
+    private $uploadedFile;
+    private $uploadDir = 'img/uploads/';
+    private $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+    public function __construct(){
+        $this->uploadedFile = $_FILES['image'];
+    }
     public function ImageUploader(){
         $errorMessage = new ErrorHandler();
+
         $imagePath = null;
-        if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK){
-            $uploadedFile = $_FILES['image'];
-            $fileName = basename($uploadedFile['name']);
-            $fileTmpPath = $uploadedFile['tmp_name'];
-            $fileType = $uploadedFile['type'];
-            $fileSize = $uploadedFile['size'];
+        if (isset($this->uploadedFile) && $this->uploadedFile['error'] === UPLOAD_ERR_OK){
+            $fileName = basename($this->uploadedFile['name']);
 
             // Define the path where the file will be saved
-            $uploadDir = 'img/uploads/';
-            $imagePath = $uploadDir . $fileName;
+            $imagePath = $this->uploadDir . $fileName;
 
             // Check if the file type is an image and the file size is valid
-            $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
-            if (!in_array($fileType, $allowedTypes) || $fileSize >= 5000000) { // 5MB limit
+            if (!in_array($this->uploadedFile['type'], $this->allowedTypes) || $this->uploadedFile['size'] >= 5000000) { // 5MB limit
                 echo $errorMessage->showError("Invalid file type or file too large.");
                 exit();
-            } elseif (!move_uploaded_file($fileTmpPath, $imagePath)) {
+            } elseif (!move_uploaded_file($this->uploadedFile['tmp_name'], $imagePath)) {
                 echo $errorMessage->showError("Error moving the uploaded file.");
                 exit();
             }

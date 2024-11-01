@@ -15,7 +15,7 @@ if (!isset($_POST['Submit'])) {
 }
 
 // Validate the form
-if (!$isValid->validateForm("project")) {
+if (!$isValid->validateForm()){
     echo $errorMessage->showError('Oops, something went wrong!');
     exit();
 }

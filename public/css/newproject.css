@@ -31,6 +31,8 @@ h2{
     color: var(--second-color);
 }
 textarea{
+    font-family: inherit;
+    font-size: .85rem;
     resize: none;
     border-radius: .5rem;
     border: none;
@@ -49,6 +51,7 @@ button:hover{
     transition: .3s;
 }
 input[type="text"]{
+    font-family: inherit;
     border-radius: .5rem;
     border: none;
     height: 2rem;
@@ -61,13 +64,57 @@ select{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 2rem;
+    accent-color: var(--second-color);
 }
 #buttonDiv{
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
+    gap: 10rem;
 }
 
 #editSkills{
     max-width: 25rem;
+}
+button{
+    width: 100%;
+}
+button:active{
+    background-color: var(--font-color-hover);
+}
+#goBackButton{
+    background-color: var(--main-color);
+    color: var(--font-color);
+}
+#goBackButton:hover{
+    background-color: var(--background-color);
+}
+input[type="file"]{
+    display: none;
+}
+.fileUpload{
+    background-color: var(--main-color);
+    color: var(--font-color);
+    border-radius: 3rem;
+    cursor: pointer;
+    max-width: 8rem;
+    height: 2.5rem;
+    margin-top: 2rem;
+}
+.fileUpload > label{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    min-height: 100%;
+    min-width: 100%;
+}
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    min-width: 6rem;
+    border-radius: 3rem;
 }

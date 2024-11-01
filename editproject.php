@@ -4,9 +4,11 @@ require_once 'errorhandler.class.php';
 session_start();
 
 $id = $_GET['id'];
-$selectedProject = null;
-$errorMessage = new ErrorHandler();
+$allSkills = ['HTML', 'PHP', 'CSS', 'JavaScript', 'Python', 'Java', 'SQL', 'C#', 'GDScript', 'Shell'];
 
+
+$errorMessage = new ErrorHandler();
+$selectedProject = null;
 // Find the project in the session array
 foreach ($_SESSION['projects'] as $project){
     if ($project->getId() == $id){
@@ -15,12 +17,11 @@ foreach ($_SESSION['projects'] as $project){
     }
 }
 
+// Handle project not found
 if (!$selectedProject){
-    // Handle project not found
     echo $errorMessage->showError("Project not found.");
     exit();
 }
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -43,30 +44,31 @@ if (!$selectedProject){
             <label for="description">Description:</label>
             <textarea name="description" id="description" required><?php echo $project->getDescription(); ?></textarea>
             <?php
-            // Array of all possible skills
-            $allSkills = ['HTML', 'PHP', 'CSS', 'JavaScript', 'Python', 'Java', 'SQL', 'C#', 'GDScript', 'Shell'];
-
             // Retrieve skills used by this project as an array
             $usedSkills = $project->getSkills();
             ?>
             <div id="skillsBox">
                 <p>Skills: </p>
                 <div id="editSkills">
-                    <?php foreach ($allSkills as $skill): ?>
+                    <?php foreach ($allSkills as $skill){ ?>
                         <input type="checkbox" id="<?php echo $skill; ?>" name="checks[]" value="<?php echo $skill; ?>" <?php if (in_array($skill, $usedSkills)) echo 'checked'; ?>>
                         <label for="<?php echo $skill; ?>"><?php echo $skill; ?></label>
-                    <?php endforeach; ?>
+                    <?php }; ?>
                 </div>
             </div>
-            <label for="image">Upload Image:</label>
-            <input type="file" id="image" name="image" accept="image/*">
+            <div class="fileUpload">
+                <label for="image">
+                    <input type="file" id="image" name="image" accept="image/*">Upload Image
+                </label>
+            </div>
             <div id="buttonDiv">
                 <button type="submit">Update Project</button>
+                <a id="goBackButton" onclick="location.href='projects.php'">Go Back</a>
             </div>
         </form>
         <form method="post" action="deleteproject.php">
             <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
-            <button type="submit" onclick="return confirm('Are you sure you want to delete this project?');">Delete Project</button>
+            <button type="submit" id="deleteButton" onclick="return confirm('Are you sure you want to delete this project?');">Delete Project</button>
         </form>
     </div>
 </body>

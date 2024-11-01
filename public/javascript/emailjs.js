@@ -10,6 +10,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     // these IDs from the previous steps
     emailjs.sendForm('default_service', 'contact_form', this, '')
         .then(() => {
+            alert("Your information has been send. I will get in contact with you shortly.")
             console.log('SUCCESS!');
         }, (error) => {
             console.log('FAILED...', error);
