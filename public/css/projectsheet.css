@@ -1,22 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "configsheet.css";
 @import "homepage.css";
 
-button{
-    font-family: inherit;
-    border: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-}
-.stop-scrolling{
-    height: 100%;
-    overflow: hidden;
-}
-
 /*Projects section*/
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 .projectsMain{
     width: 80%;
     background-color: var(--main-color);
@@ -61,61 +46,5 @@ h1{
     padding: 0;
     margin: 0;
     background-color: var(--font-color);
-    color: var(--main-color);
-}
-.popUpMenu{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    visibility: hidden;
-    background-color: var(--second-color);
-    border-radius: 5%;
-    width: 40rem;
-    height: 25rem;
-}
-.popUpBox{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    width: 95%;
-    height: 95%;
-    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-    border-radius: 5%;
-    font-size: 1.2rem;
-    background-color: var(--font-color);
-}
-.popUpForm{
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-.popUpButton{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    width: 100%;
-    height: 5rem;
-    margin-top: 1rem;
-}
-.passwordButton{
-    background-color: var(--background-color);
-    color: var(--font-color);
-    width: 20rem;
-    height: 3rem;
-    border-radius: 10rem;
-    font-size: 1rem;
-}
-#password{
-    width: 12rem;
-    height: 2rem;
-    margin-left: .5rem;
-    padding-left: 1rem;
-    border: none;
-    border-radius: 3rem;
-}
-::placeholder{
-    font-family: Poppins, Roboto, sans-serif;
     color: var(--main-color);
 }

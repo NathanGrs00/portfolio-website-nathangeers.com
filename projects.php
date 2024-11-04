@@ -1,6 +1,5 @@
 <?php
 require_once 'projectcontroller.class.php';
-session_start();
 
 $listProjects = new ProjectController();
 ?>

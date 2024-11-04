@@ -1,35 +1,44 @@
-@import "projectsheet.css";
+@import "configsheet.css";
 
 .wrapper{
-    display: flex;
-    height: 50rem;
+    height: 100vh;
+    width: auto;
 }
-.featuredBlock{
+.mainBlock{
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    background-color: var(--main-color);
-}
-.popUpDiv{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     flex-direction: column;
-    background-color: var(--font-color);
-    height: 90%;
-    width: 90%;
-    font-size: 1.5rem;
+    font-size: 2rem;
+    color: var(--font-color);
+    background-color: var(--main-color);
+    border-radius: 1rem;
+    width: 20%;
+    height: 30%;
 }
-
 button{
-    margin-top: 3rem;
-    height: 2rem;
-    width: 10rem;
+    margin-top: 1.2rem;
+    height: 3rem;
+    width: 85%;
     border-radius: 3rem;
+    border: none;
     background-color: var(--second-color);
+    color: var(--background-color);
+    font-size: 1.2rem;
 }
 button:hover{
-    background-color: var(--main-color);
+    background-color: var(--background-color);
     color: var(--second-color);
+}
+
+input[type='password']{
+    accent-color: var(--second-color);
+    font-family: inherit;
+    font-size: 1.2rem;
+    height: 2rem;
+    width: 85%;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: none;
 }

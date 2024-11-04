@@ -10,13 +10,13 @@ $isValid = new FormValidator();
 $newProject = new ProjectController();
 
 if (!isset($_POST['Submit'])) {
-    echo $errorMessage->showError('Oops, something went wrong!');
+    $errorMessage->showError('Oops, something went wrong!');
     exit();
 }
 
 // Validate the form
 if (!$isValid->validateForm()){
-    echo $errorMessage->showError('Oops, something went wrong!');
+    $errorMessage->showError('Oops, something went wrong!');
     exit();
 }
 

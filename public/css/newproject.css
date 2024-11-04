@@ -1,4 +1,4 @@
-@import "homepage.css";
+@import "configsheet.css";
 
 body{
     display: flex;
@@ -6,15 +6,14 @@ body{
     align-items: center;
     height: 100vh;
 }
-#wrapper{
+#mainBlock{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: var(--main-color);
     border-radius: 2rem;
-    height: 70%;
-    width: 40%;
+    width: 40rem;
 }
 form{
     display: flex;
@@ -67,6 +66,10 @@ select{
     margin-top: 2rem;
     accent-color: var(--second-color);
 }
+#skillsBoxMini{
+    width: 28rem;
+}
+
 #buttonDiv{
     display: flex;
     justify-content: space-between;
@@ -92,6 +95,11 @@ button:active{
 }
 input[type="file"]{
     display: none;
+}
+input[type="checkbox"]{
+    accent-color: var(--second-color);
+    transform: scale(1.6);
+    margin-left: .8rem;
 }
 .fileUpload{
     background-color: var(--main-color);

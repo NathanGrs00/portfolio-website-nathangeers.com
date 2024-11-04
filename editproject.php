@@ -1,7 +1,6 @@
 <?php
 require_once 'project.class.php';
 require_once 'errorhandler.class.php';
-session_start();
 
 $id = $_GET['id'];
 $allSkills = ['HTML', 'PHP', 'CSS', 'JavaScript', 'Python', 'Java', 'SQL', 'C#', 'GDScript', 'Shell'];
@@ -19,7 +18,7 @@ foreach ($_SESSION['projects'] as $project){
 
 // Handle project not found
 if (!$selectedProject){
-    echo $errorMessage->showError("Project not found.");
+    $errorMessage->showError("Project not found.");
     exit();
 }
 ?>

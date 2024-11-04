@@ -5,7 +5,7 @@ class FormValidator{
         $errorMessage = new ErrorHandler();
 
         if (empty($_POST["title"]) || empty($_POST["description"]) || empty($_POST["checks"])){
-            echo $errorMessage->showError("All fields are required");
+            $errorMessage->showError("All fields are required");
             return False;
         }
         return True;

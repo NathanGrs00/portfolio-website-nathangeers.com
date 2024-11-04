@@ -8,7 +8,7 @@ class ProjectRemover{
         $errorMessage = new ErrorHandler();
         // Check if projectID is passed
         if (!isset($_POST['projectID'])) {
-            echo $errorMessage->showError("Project ID is missing.");
+            $errorMessage->showError("Project ID is missing.");
             exit();
         }
         $this->deleteProject();

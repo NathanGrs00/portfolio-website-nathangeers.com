@@ -19,15 +19,15 @@ class ImageController{
 
             // Check if the file type is an image and the file size is valid
             if (!in_array($this->uploadedFile['type'], $this->allowedTypes) || $this->uploadedFile['size'] >= 5000000) { // 5MB limit
-                echo $errorMessage->showError("Invalid file type or file too large.");
+                $errorMessage->showError("Invalid file type or file too large.");
                 exit();
             } elseif (!move_uploaded_file($this->uploadedFile['tmp_name'], $imagePath)) {
-                echo $errorMessage->showError("Error moving the uploaded file.");
+                $errorMessage->showError("Error moving the uploaded file.");
                 exit();
             }
         }else{
             // Handle the case where no file was uploaded or there was an error
-            echo $errorMessage->showError("Error uploading image.");
+            $errorMessage->showError("Error uploading image.");
             exit();
         }
         return $imagePath;

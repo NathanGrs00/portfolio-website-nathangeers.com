@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    overflow-y: scroll;
+}
+body{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, Roboto, sans-serif;
+    --background-color: #242423;
+    --main-color: #333533;
+    --second-color: #f5cb5c;
+    --font-color: #e8eddf;
+    --font-color-hover: #cfdbd5;
+    background-color: var(--background-color);
+}
+button{
+    font-family: inherit;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    height: 5rem;
+    background-color: var(--background-color);
+    padding-left: 5%;
+    padding-right: 5%;
+    box-shadow: 0 .1rem 1.5rem var(--second-color);
+}
+.nameLogo{
+    display: flex;
+    font-size: 1.9rem;
+    color: var(--font-color);
+    width: 15%;
+    margin-bottom: .2rem;
+    margin-top: .2rem;
+    flex-wrap: nowrap;
+}
+span{
+    color: var(--second-color);
+}
+nav > ul{
+    margin: 0;
+    padding: 0;
+}
+nav > ul > li{
+    font-size: 1.2rem;
+    display: inline;
+    padding: 1rem;
+}
+nav > ul > li > a{
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: 700;
+    transition: 1s;
+}
+nav > ul > li > a:hover{
+    color: var(--font-color-hover);
+    border-bottom: 0.2rem solid var(--second-color);
+    border-radius: .4rem;
+    padding-bottom: .3rem;
+    transition: .3s;
+}
+#navButton{
+    font-size: 1.2rem;
+    width: 15%;
+    background: var(--font-color);
+    padding: .5rem;
+    border: none;
+    border-radius: 3rem;
+    transition: .3s;
+}
+#navButton:hover{
+    color: var(--background-color);
+    background-color: var(--second-color);
+    transition: .3s;
+    transform: scale(1.1);
+}

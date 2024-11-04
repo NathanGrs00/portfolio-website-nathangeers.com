@@ -1,6 +1,15 @@
 <?php
+session_start();
 class ErrorHandler {
     public function showError($message) {
-        return $message . "<button onclick=location.href='projects.php'>Go Back</button>";
+        $_SESSION['errormessage'] = $message;
+        header('Location: displaymessage.php');
+        exit();
+    }
+    public function getMessage(){
+        // Check if 'errormessage' is set in the session; if not, return an empty string
+        $message = $_SESSION['errormessage'];
+        unset($_SESSION['errormessage']); // Clear the message from session after retrieving it
+        return $message;
     }
 }

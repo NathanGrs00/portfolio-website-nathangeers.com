@@ -39,7 +39,7 @@ class ProjectUpdater{
                     $project->setImage($this->imagePath);  // Update the image if provided.
                 }
 
-                echo $errorMessage->showError("Project updated successfully!");
+                $errorMessage->showError("Project updated successfully!");
                 break;
             }
         }

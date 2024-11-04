@@ -3,8 +3,6 @@ require_once 'projectcontroller.class.php';
 require_once 'project.class.php';
 require_once 'displayrecentproject.class.php';
 
-session_start();
-
 if (!isset($_SESSION['projects'])){
     $newList = new ProjectController();
     $newList->newProjectList();

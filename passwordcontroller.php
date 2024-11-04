@@ -14,17 +14,17 @@ class PasswordController{
             $this->checkPassword();
         }else{
             $errorMessage = new ErrorHandler();
-            echo $errorMessage->showError("Please enter a password.");
+            $errorMessage->showError("Please enter a password.");
         }
     }
     public function checkPassword(){
         $storedPasswordHash = password_hash('test123', PASSWORD_DEFAULT);
 
         if (password_verify($this->password, $storedPasswordHash)) {
-            if ($this->action === 'add') {
+            if ($this->action == 'add') {
                 header('Location: public/html/addprojects.html');
                 exit();
-            } elseif ($this->action === 'edit') {
+            } elseif ($this->action == 'edit') {
                 // Handle editing a specific project.
                 $projectId = $_POST['projectID']; // Get the project ID if editing
                 header("Location: editproject.php?id=$projectId");
@@ -32,7 +32,7 @@ class PasswordController{
             }
         }else{
             $errorMessage = new ErrorHandler();
-            echo $errorMessage->showError("Wrong password.");
+            $errorMessage->showError("Wrong password.");
         }
     }
 }

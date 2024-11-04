@@ -1,14 +1,6 @@
-@import "homepage.css";
+@import "configsheet.css";
 
-body{
-    height: 100vh;
-    width: auto;
-}
 .wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
     height: 90%;
 }
 #formDiv{
@@ -48,7 +40,7 @@ label{
     color: var(--font-color);
 }
 input{
-    border-radius: 1rem;
+    border-radius: .6rem;
     border: none;
     background-color: var(--font-color);
     height: 5%;
