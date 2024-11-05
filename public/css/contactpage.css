@@ -1,20 +1,13 @@
 @import "configsheet.css";
 
+/*Text Color*/
 p, label, input, textarea, h1{
     color: var(--font-color);
 }
-input, textarea{
-    border-radius: .6rem;
-    border: none;
-    width: 98%;
-}
+/*Div's and Form*/
 form, .formText{
     width: 40%;
 }
-h2, p{
-    margin-top: 0;
-}
-
 .wrapper{
     height: 90%;
 }
@@ -36,6 +29,10 @@ form{
     flex-direction: column;
 }
 
+/*Text properties*/
+h2, p{
+    margin-top: 0;
+}
 h1{
     font-size: 3rem;
 }
@@ -47,8 +44,14 @@ p{
     margin-bottom: 4rem;
 }
 
+/*Input fields*/
+input, textarea{
+    border-radius: .6rem;
+    border: none;
+    width: 98%;
+}
 input{
-    height: 5%;
+    height: 1rem;
     margin-bottom: 1rem;
 }
 textarea{

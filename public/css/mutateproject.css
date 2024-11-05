@@ -1,53 +1,40 @@
 @import "configsheet.css";
 
-body{
+body, #mainBlock{
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+}
+.wrapper{
+    flex-direction: column;
+}
+#mainBlock, form, button, a{
+    border-radius: 2rem;
 }
 #mainBlock{
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: var(--main-color);
-    border-radius: 2rem;
-    width: 40rem;
+    width: 43rem;
 }
 form{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     background-color: var(--font-color);
-    border-radius: 2rem;
-    width: 80%;
+    width: 35rem;
     height: 80%;
     padding: 2rem;
     margin-bottom: 2rem;
 }
+
+/*Text and Inputs*/
 h2{
     color: var(--second-color);
 }
 textarea{
-    font-family: inherit;
     font-size: .85rem;
-    resize: none;
     border-radius: .5rem;
-    border: none;
     height: 5rem;
-}
-button{
-    background-color: var(--second-color);
-    border: none;
-    border-radius: 2rem;
-    height: 2.5rem;
-    width: 10rem;
-}
-button:hover{
-    background-color: var(--main-color);
-    color: var(--font-color);
-    transition: .3s;
 }
 input[type="text"]{
     font-family: inherit;
@@ -55,33 +42,32 @@ input[type="text"]{
     border: none;
     height: 2rem;
 }
-select{
-    display: flex;
-    flex-direction: row;
-}
-#skillsBox{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 2rem;
+input[type="checkbox"]{
     accent-color: var(--second-color);
+    transform: scale(1.6);
+    margin-left: .8rem;
 }
-#skillsBoxMini{
-    width: 28rem;
+input[type="file"]{
+    display: none;
 }
 
+/*Buttons*/
 #buttonDiv{
     display: flex;
     justify-content: space-between;
     margin-top: 2rem;
     gap: 10rem;
 }
-
-#editSkills{
-    max-width: 25rem;
-}
 button{
+    background-color: var(--second-color);
+    border: none;
+    height: 2.5rem;
     width: 100%;
+}
+button:hover{
+    background-color: var(--main-color);
+    color: var(--font-color);
+    transition: .3s;
 }
 button:active{
     background-color: var(--font-color-hover);
@@ -93,14 +79,25 @@ button:active{
 #goBackButton:hover{
     background-color: var(--background-color);
 }
-input[type="file"]{
-    display: none;
-}
-input[type="checkbox"]{
+
+/*Skills*/
+#skillsBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
     accent-color: var(--second-color);
-    transform: scale(1.6);
-    margin-left: .8rem;
 }
+#skillsBoxMini{
+    width: 28rem;
+}
+
+/*Edit Project*/
+#editSkills{
+    max-width: 28rem;
+}
+
+/*File Upload 'button'*/
 .fileUpload{
     background-color: var(--main-color);
     color: var(--font-color);
@@ -110,19 +107,16 @@ input[type="checkbox"]{
     height: 2.5rem;
     margin-top: 2rem;
 }
-.fileUpload > label{
+a, .fileUpload > label {
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 0.85rem;
+}
+.fileUpload > label{
     min-height: 100%;
     min-width: 100%;
 }
 a{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.85rem;
     min-width: 6rem;
-    border-radius: 3rem;
 }

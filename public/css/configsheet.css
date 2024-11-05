@@ -8,7 +8,6 @@ body{
     height: 100vh;
     margin: 0;
     padding: 0;
-    font-family: Poppins, Roboto, sans-serif;
     --background-color: #242423;
     --main-color: #333533;
     --second-color: #f5cb5c;
@@ -16,13 +15,13 @@ body{
     --font-color-hover: #cfdbd5;
     background-color: var(--background-color);
 }
-button{
-    font-family: inherit;
+body, input, textarea, button{
+    font-family: Poppins, Roboto, sans-serif;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
-}
-textarea{
     resize: none;
+}
+button{
+    box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
 }
 .wrapper {
     display: flex;
@@ -30,7 +29,7 @@ textarea{
     align-items: center;
 }
 
-/*Navbar properties*/
+/*Navigation bar Elements*/
 nav{
     display: flex;
     align-items: center;
@@ -44,14 +43,16 @@ nav{
     padding-right: 5%;
     box-shadow: 0 .1rem 1.5rem var(--second-color);
 }
+#hiddenLogo{
+    display: none;
+}
 .nameLogo{
     display: flex;
-    font-size: 1.9rem;
+    font-size: clamp(1rem, 2vw, 2rem);
     color: var(--font-color);
     width: 15%;
     margin-bottom: .2rem;
     margin-top: .2rem;
-    flex-wrap: nowrap;
 }
 span{
     color: var(--second-color);
@@ -59,9 +60,11 @@ span{
 nav > ul{
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
 }
 nav > ul > li{
-    font-size: 1.2rem;
+    font-size: clamp(.8rem, 2vw, 1.5rem);
     display: inline;
     padding: 1rem;
 }
@@ -69,7 +72,6 @@ nav > ul > li > a{
     color: var(--font-color);
     text-decoration: none;
     font-weight: 700;
-    transition: 1s;
 }
 nav > ul > li > a:hover{
     color: var(--font-color-hover);
@@ -79,17 +81,34 @@ nav > ul > li > a:hover{
     transition: .3s;
 }
 #navButton{
-    font-size: 1.2rem;
-    width: 15%;
+    font-size: clamp(.8rem, 2vw, 1rem);
+    width: clamp(70px, 15%, 10rem);
     background: var(--font-color);
     padding: .5rem;
     border: none;
     border-radius: 3rem;
-    transition: .3s;
 }
 #navButton:hover{
     color: var(--background-color);
     background-color: var(--second-color);
     transition: .3s;
     transform: scale(1.1);
+}
+
+/*Responsive Design*/
+@media screen and (max-width: 600px){
+    nav > ul > li{
+       padding: .3rem;
+   }
+}
+@media screen and (max-width: 500px){
+    #homeElement{
+        display: none;
+    }
+    #hiddenLogo{
+        display: initial;
+    }
+    #shownLogo{
+        display: none;
+    }
 }

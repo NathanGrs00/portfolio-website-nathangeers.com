@@ -3,24 +3,23 @@
 /* Section One */
 .sectionWelcome{
     display: flex;
-    height: 35rem;
+    height: 30rem;
     background-color: var(--background-color);
 }
-.welcomeDivLeft{
+.welcomeDivLeft, .welcomeDivRight{
     display: flex;
     align-items: center;
     width: 50%;
+}
+.welcomeDivLeft{
     margin-left: 6rem;
     flex-wrap: wrap;
 }
 .welcomeDivRight{
-    display: flex;
     justify-content: center;
-    align-items: center;
-    width: 50%;
 }
 .welcomeDivRight > img{
-    height: 80%;
+    width: clamp(250px,50%,400px);
     border: var(--second-color) solid 5px;
     border-radius: 50%;
     background-color: var(--main-color);
@@ -28,10 +27,8 @@
 }
 .contentButton{
     font-size: 1.2rem;
-    width: 30%;
     padding: 1rem;
     margin-bottom: 2rem;
-    border: none;
     border-radius: 2rem;
     background-color: var(--main-color);
     color: var(--font-color);
@@ -90,6 +87,7 @@ svg{
 .hiddenText > p{
     color: var(--font-color);
     padding: 1.5rem;
+    font-size: clamp(1rem, 1vw, 2rem);
 }
 .hiddenText:hover{
     opacity: 1;
@@ -116,10 +114,13 @@ svg{
 }
 .divRightText > h3{
     color: var(--second-color);
-    font-size: 1.5rem;
+    font-size: clamp(1.2rem, 1.5vw, 2rem);
 }
 .divRightText > h4{
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 1.2vw, 2rem);
+}
+.divRightText > p{
+    font-size: clamp(.8rem, 1vw, 2rem);
 }
 
 /*Section Three*/
@@ -143,11 +144,10 @@ svg{
     width: 30%;
     height: 23rem;
     background-color: var(--main-color);
-    border: var(--second-color) solid .2rem;
     border-radius: 2rem;
 }
 .homeImage > img{
-    object-fit: contain;
+    object-fit: cover;
     width: 100%;
 }
 .featuredBlock{
@@ -167,7 +167,10 @@ svg{
     color: var(--second-color);
     margin-bottom: 0;
     margin-top: 0;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.4vw, 2rem)
+}
+.blockText > p{
+    font-size: clamp(.8rem, 1vw, 2rem)
 }
 .blockText > button{
     border: none;
@@ -219,4 +222,89 @@ svg{
     margin: 0.3rem;
     width: fit-content;
     flex-basis: content;
+}
+
+/*Responsive Design*/
+@media screen and (max-width: 1320px) {
+    #entryText{
+        font-size: 2rem;
+    }
+    .contentButton{
+        font-size: 1rem;
+    }
+    .sectionBio{
+        flex-direction: column;
+        height: 50rem;
+    }
+    .bioHoverCubes{
+        width: 100%;
+    }
+    .bioDivLeft, .bioDivRight{
+        width: 100%;
+        justify-content: center;
+    }
+    .bioDivRight{
+        align-items: center;
+    }
+    .divRightText{
+        text-align: center;
+        padding-right: 0;
+    }
+    .icons{
+        width: 40%;
+    }
+    .sectionExpProject{
+        flex-direction: column;
+        height: 50rem;
+    }
+    .homeImage{
+        width: 80%;
+    }
+    .featuredBlock{
+        width: 80%;
+    }
+}
+@media screen and (max-width: 680px) {
+    .sectionWelcome{
+        height: 20rem;
+    }
+    .welcomeDivRight > img {
+        width: clamp(100px, 50%, 400px);
+    }
+    .welcomeDivLeft{
+        margin-left: 2rem;
+    }
+    #entryText{
+        font-size: 1.2rem;
+    }
+    .contentButton{
+        font-size: 0.8rem;
+    }
+    .sectionBio{
+        height: 80rem;
+    }
+    .bioHoverCubes{
+        flex-direction: column;
+    }
+    .icons{
+        width: 70%;
+        margin: 1rem;
+    }
+    .hiddenText > p{
+        font-size: clamp(0.8rem, 1vw, 2rem);
+    }
+    .sectionExpProject{
+        height: 90rem;
+    }
+    .featuredBlock{
+        flex-direction: column;
+        height: 60rem;
+    }
+    .blockText{
+        width: 90%;
+        padding: 0;
+    }
+    .blockSkills, .skillsBox{
+        width: 100%;
+    }
 }

@@ -30,10 +30,10 @@ if (!$selectedProject){
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="public/css/newproject.css"
+    <link rel="stylesheet" href="public/css/mutateproject.css"
 </head>
 <body>
-    <div class="wrapper" id="wrapper">
+    <div class="wrapper">
         <h2>Edit a project</h2>
         <form method="post" action="updateprojects.php" enctype="multipart/form-data">
             <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
@@ -41,7 +41,7 @@ if (!$selectedProject){
             <input type="text" name="title" id="title" value="<?php echo $project->getTitle(); ?>" required />
 
             <label for="description">Description:</label>
-            <textarea name="description" id="description" required><?php echo $project->getDescription(); ?></textarea>
+            <textarea name="description" id="description" maxlength="200" required><?php echo $project->getDescription(); ?></textarea>
             <?php
             // Retrieve skills used by this project as an array
             $usedSkills = $project->getSkills();

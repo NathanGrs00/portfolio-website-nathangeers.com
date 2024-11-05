@@ -14,9 +14,10 @@ $listProjects = new ProjectController();
 </head>
 <body id="body">
     <nav>
-        <h2 onclick="location.href='index.php'" class="nameLogo">Nathan <span>Geers</span></h2>
+        <h2 onclick="location.href='index.php'" class="nameLogo" id="hiddenLogo">N<span>G</span></h2>
+        <h2 onclick="location.href='index.php'" class="nameLogo" id="shownLogo">Nathan<span>Geers</span></h2>
         <ul>
-            <li><a href="index.php">Home</a></li>
+            <li id="homeElement"><a href="index.php">Home</a></li>
             <li><a href="#">Experience</a></li>
             <li><a href="#">CV</a></li>
             <li><a href="projects.php">Projects</a></li>

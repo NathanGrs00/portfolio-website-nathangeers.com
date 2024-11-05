@@ -2,7 +2,6 @@
 
 .wrapper{
     height: 100vh;
-    width: auto;
 }
 .mainBlock{
     display: flex;
@@ -10,13 +9,14 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: var(--font-color);
     background-color: var(--main-color);
     border-radius: 1rem;
     width: 20%;
     height: 30%;
 }
+/*Buttons*/
 button{
     margin-top: 1.2rem;
     height: 3rem;
@@ -32,8 +32,8 @@ button:hover{
     color: var(--second-color);
 }
 
+/*Password input*/
 input[type='password']{
-    accent-color: var(--second-color);
     font-family: inherit;
     font-size: 1.2rem;
     height: 2rem;
