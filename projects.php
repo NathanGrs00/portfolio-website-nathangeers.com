@@ -14,8 +14,8 @@ $listProjects = new ProjectController();
 </head>
 <body id="body">
     <nav>
-        <h2 onclick="location.href='index.php'" class="nameLogo" id="hiddenLogo">N<span>G</span></h2>
-        <h2 onclick="location.href='index.php'" class="nameLogo" id="shownLogo">Nathan<span>Geers</span></h2>
+        <h2 onclick="location.href='index.php'" class="nameLogo, hiddenLogo">N<span>G</span></h2>
+        <h2 onclick="location.href='index.php'" class="nameLogo, shownLogo">Nathan<span>Geers</span></h2>
         <ul>
             <li id="homeElement"><a href="index.php">Home</a></li>
             <li><a href="#">Experience</a></li>
@@ -32,7 +32,8 @@ $listProjects = new ProjectController();
             $listProjects->showAllProjects();
             ?>
             <div class="addProjects">
-                <h2 onclick="location.href='index.php'" class="nameLogo">Nathan <span>Geers</span></h2>
+                <h2 onclick="location.href='index.php'" class="nameLogo, shownLogo" >Nathan <span>Geers</span></h2>
+                <h2 onclick="location.href='index.php'" class="nameLogo, hiddenLogo">N<span>G</span></h2>
                 <button class="contentButton" onclick="location.href='public/html/passwordform.html'">Add Projects</button>
             </div>
         </div>

@@ -43,13 +43,15 @@ nav{
     padding-right: 5%;
     box-shadow: 0 .1rem 1.5rem var(--second-color);
 }
-#hiddenLogo{
+.hiddenLogo{
     display: none;
+}
+.shownLogo{
+    color: var(--font-color);
 }
 .nameLogo{
     display: flex;
     font-size: clamp(1rem, 2vw, 2rem);
-    color: var(--font-color);
     width: 15%;
     margin-bottom: .2rem;
     margin-top: .2rem;
@@ -105,10 +107,11 @@ nav > ul > li > a:hover{
     #homeElement{
         display: none;
     }
-    #hiddenLogo{
+    .hiddenLogo{
         display: initial;
+        color: var(--font-color);
     }
-    #shownLogo{
+    .shownLogo{
         display: none;
     }
 }
