@@ -49,7 +49,9 @@ h1{
     background-color: var(--font-color);
     color: var(--main-color);
 }
-
+.hiddenButton{
+    display: none;
+}
 @media screen and (max-width: 1320px) {
     .projectsMain{
 

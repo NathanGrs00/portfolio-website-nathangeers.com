@@ -8,7 +8,7 @@ class ProjectPrinter {
                 <div class="blockText">
                     <h4>$title</h4>
                     <p>$description</p>
-                    <button onclick="location.href='editproject.php?id=$id'">Edit</button>
+                    <button class="hiddenButton hiddenEdit" onclick="location.href='editproject.php?id=$id'">Edit</button>
                 </div> <!-- Close blockText -->
                 
                 <div class="blockSkills">

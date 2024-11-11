@@ -45,5 +45,5 @@ class ProjectUpdater{
         }
     }
 }
-$update = new ProjectUpdater($_POST['projectID'], $_POST['title'], $_POST['description'], $_POST['checks'], $_FILES['image']);
+$update = new ProjectUpdater($_POST['projectID'], $_POST['title'], $_POST['description'], $_POST['checks']);
 $update->checkImage();

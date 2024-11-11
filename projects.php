@@ -1,6 +1,5 @@
 <?php
 require_once 'projectcontroller.class.php';
-
 $listProjects = new ProjectController();
 ?>
 <!DOCTYPE html>
@@ -11,6 +10,7 @@ $listProjects = new ProjectController();
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>My Projects | Nathan Geers</title>
     <link rel="stylesheet" href="public/css/projectsheet.css">
+    <script src="public/javascript/passcorrect.js"></script>
 </head>
 <body id="body">
     <nav>
@@ -34,9 +34,16 @@ $listProjects = new ProjectController();
             <div class="addProjects">
                 <h2 onclick="location.href='index.php'" class="nameLogo, shownLogo" >Nathan <span>Geers</span></h2>
                 <h2 onclick="location.href='index.php'" class="nameLogo, hiddenLogo">N<span>G</span></h2>
-                <button class="contentButton" onclick="location.href='public/html/passwordform.html'">Add Projects</button>
+                <button class="hiddenButton contentButton" id="hiddenAdd" onclick="location.href='public/html/addprojects.html'">Add Projects</button>
+                <button class="contentButton" onclick="location.href='public/html/passwordform.html'">Login</button>
             </div>
         </div>
     </div>
+    <script>
+        <?php if (isset($_SESSION['correctPassword'])): ?>
+        console.log("Session variable set, calling toggleVisible");
+        toggleVisible();
+        <?php endif; ?>
+    </script>
 </body>
 </html>
