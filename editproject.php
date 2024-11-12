@@ -2,11 +2,12 @@
 require_once 'project.class.php';
 require_once 'errorhandler.class.php';
 
+//Gets the ID from the link.
 $id = $_GET['id'];
 $allSkills = ['HTML', 'PHP', 'CSS', 'JavaScript', 'Python', 'Java', 'SQL', 'C#', 'GDScript', 'Shell'];
 
-
 $errorMessage = new ErrorHandler();
+//Sets the variable to null to avoid error.
 $selectedProject = null;
 // Find the project in the session array
 foreach ($_SESSION['projects'] as $project){
@@ -49,7 +50,8 @@ if (!$selectedProject){
             <div id="skillsBox">
                 <p>Skills: </p>
                 <div id="editSkills">
-                    <?php foreach ($allSkills as $skill){ ?>
+                    <?php // Goes through each skill and checks the checkbox if it's in the usedSkills arrau.
+                    foreach ($allSkills as $skill){ ?>
                         <input type="checkbox" id="<?php echo $skill; ?>" name="checks[]" value="<?php echo $skill; ?>" <?php if (in_array($skill, $usedSkills)) echo 'checked'; ?>>
                         <label for="<?php echo $skill; ?>"><?php echo $skill; ?></label>
                     <?php }; ?>

@@ -5,23 +5,29 @@ class ImageController{
     private $uploadDir = 'img/uploads/';
     private $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
     public function __construct(){
+        // Setting a variable to the image array.
         $this->uploadedFile = $_FILES['image'];
     }
     public function ImageUploader(){
         $errorMessage = new ErrorHandler();
 
+        // Setting the path to null to avoid errors.
         $imagePath = null;
+        // Checks if the uploaded file is set and if there are no errors when uploaded.
         if (isset($this->uploadedFile) && $this->uploadedFile['error'] === UPLOAD_ERR_OK){
+            // Setting the filename to the name of the image. Using basename to avoid errors.
             $fileName = basename($this->uploadedFile['name']);
 
-            // Define the path where the file will be saved
+            // Defining the path where the file will be saved.
             $imagePath = $this->uploadDir . $fileName;
 
-            // Check if the file type is an image and the file size is valid
-            if (!in_array($this->uploadedFile['type'], $this->allowedTypes) || $this->uploadedFile['size'] >= 5000000) { // 5MB limit
+            // Check if the file type is not an image by comparing it to the $allowedTypes array. and the file size is not valid. 5MB limit.
+            if (!in_array($this->uploadedFile['type'], $this->allowedTypes) || $this->uploadedFile['size'] >= 5000000) {
                 $errorMessage->showError("Invalid file type or file too large.");
                 exit();
-            } elseif (!move_uploaded_file($this->uploadedFile['tmp_name'], $imagePath)) {
+            }
+            // If the move function doesn't work for some reason, throw an error.
+            elseif (!move_uploaded_file($this->uploadedFile['tmp_name'], $imagePath)) {
                 $errorMessage->showError("Error moving the uploaded file.");
                 exit();
             }
@@ -30,6 +36,7 @@ class ImageController{
             $errorMessage->showError("Error uploading image.");
             exit();
         }
+        // Return the directory.
         return $imagePath;
     }
 }

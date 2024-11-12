@@ -29,6 +29,7 @@ $listProjects = new ProjectController();
             <h1>My Projects:</h1>
             <hr class="projectBreak">
             <?php
+            // Calls function to show all projects.
             $listProjects->showAllProjects();
             ?>
             <div class="addProjects">
@@ -40,8 +41,8 @@ $listProjects = new ProjectController();
         </div>
     </div>
     <script>
+        /* Checking if correctPassword is set and calling javascript function if so. */
         <?php if (isset($_SESSION['correctPassword'])): ?>
-        console.log("Session variable set, calling toggleVisible");
         toggleVisible();
         <?php endif; ?>
     </script>

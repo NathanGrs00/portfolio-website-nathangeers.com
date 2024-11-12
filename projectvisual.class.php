@@ -20,7 +20,7 @@ HTML;
 
         // Display each skill
         foreach ($skills as $skill) {
-            echo "<div class=\"skill\">$skill</div>";
+            echo "<div class='skill'>$skill</div>";
         }
 
         // Resume the HTML with heredoc syntax

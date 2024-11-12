@@ -6,7 +6,7 @@ session_start();
 class ProjectRemover{
     function __construct(){
         $errorMessage = new ErrorHandler();
-        // Check if projectID is passed
+        // Check if projectID is set.
         if (!isset($_POST['projectID'])) {
             $errorMessage->showError("Project ID is missing.");
             exit();
@@ -30,5 +30,5 @@ class ProjectRemover{
         exit();
     }
 }
-
+// Initiating, because the code gets here through a form.
 $initiate = new ProjectRemover();

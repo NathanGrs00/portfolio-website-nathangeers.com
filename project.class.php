@@ -1,5 +1,6 @@
 <?php
 class Project{
+    // Class with project variables, and getters and setters.
     private $id;
     private $title;
     private $description;
