@@ -3,6 +3,7 @@ require_once 'projectcontroller.class.php';
 require_once 'project.class.php';
 require_once 'displayrecentproject.class.php';
 
+//If there is no projects array, make one.
 if (!isset($_SESSION['projects'])){
     $newList = new ProjectController();
     $newList->newProjectList();
@@ -32,7 +33,7 @@ if (!isset($_SESSION['projects'])){
     </nav>
     <div class="sectionWelcome">
         <div class="welcomeDivLeft">
-            <h2 id="entryText">Hi, <br> My name is <span>Nathan</span>.<br>Welcome to my website!</h2>
+            <h2>Hi, <br> My name is <span>Nathan</span>.<br>Welcome to my website!</h2>
             <button class="contentButton" onclick="location.href='public/html/contactpage.html'">Get in contact</button>
         </div>
         <div class="welcomeDivRight">
@@ -96,7 +97,7 @@ if (!isset($_SESSION['projects'])){
         </div>
     </div>
     <?php
-    // Call the function to display the most recent project
+    // Call the function to display the most recent project.
     $recentProject = new ShowRecentProject();
     $recentProject->displayRecentProject();
     ?>

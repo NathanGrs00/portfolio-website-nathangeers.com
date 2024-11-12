@@ -1,11 +1,11 @@
 <?php
     class ShowRecentProject{
-        // Function to display the most recent project
         public function displayRecentProject(){
-            // Get the last project (most recently added)
-            $mostRecentProject = end($_SESSION['projects']); // end() gets the last element
+            // Get the last project (most recently added), end() gets the last one.
+            $mostRecentProject = end($_SESSION['projects']);
+            // getting the array elements in the html tags. The foreach loop loops through all skills and prints them.
             ?>
-            <div class="sectionExpProject">
+            <div class="sectionRecentProject">
                 <div class="homeImage">
                     <img src="<?php echo $mostRecentProject->getImage(); ?>" alt="Screenshot of <?php echo $mostRecentProject->getTitle(); ?>.">
                 </div>

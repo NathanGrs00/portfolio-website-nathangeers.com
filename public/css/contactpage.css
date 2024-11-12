@@ -69,6 +69,7 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: var(--second-color);
 }
+/*Responsive Layouts*/
 @media screen and (max-width: 1165px) {
     h1{
         font-size: 2rem;
