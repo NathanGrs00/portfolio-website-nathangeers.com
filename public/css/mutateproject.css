@@ -7,6 +7,7 @@ body, #mainBlock{
 }
 .wrapper{
     flex-direction: column;
+    margin-top: 4rem;
 }
 #mainBlock, form, button, a{
     border-radius: 2rem;
@@ -85,7 +86,6 @@ button:active{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
     accent-color: var(--second-color);
 }
 #skillsBoxMini{

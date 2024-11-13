@@ -14,8 +14,8 @@
     background-color: var(--main-color);
     border-radius: 1rem;
     min-width: 20rem;
-    width: 30%;
-    height: 30%;
+    height: 20rem;
+    padding: 1rem;
 }
 /*Buttons*/
 button{
