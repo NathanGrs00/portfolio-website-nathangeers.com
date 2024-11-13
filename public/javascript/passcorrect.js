@@ -1,4 +1,4 @@
-//Function to switch the display: none css property.
+// Function to switch the display: none css property.
 function toggleVisible() {
     // variable elements and second are set to the edit and add projects respectively.
     const elements = document.getElementsByClassName("hiddenEdit");

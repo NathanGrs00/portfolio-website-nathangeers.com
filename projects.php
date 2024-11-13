@@ -18,8 +18,7 @@ $listProjects = new ProjectController();
         <h2 onclick="location.href='index.php'" class="nameLogo, shownLogo">Nathan<span>Geers</span></h2>
         <ul>
             <li id="homeElement"><a href="index.php">Home</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">CV</a></li>
+            <li><a href="public/html/cv.html">CV</a></li>
             <li><a href="projects.php">Projects</a></li>
         </ul>
         <button id="navButton" onclick="location.href='public/html/contactpage.html'">Contact</button>

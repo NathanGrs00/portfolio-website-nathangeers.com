@@ -25,8 +25,7 @@ if (!isset($_SESSION['projects'])){
         <h2 onclick="location.href='index.php'" class="nameLogo, shownLogo">Nathan<span>Geers</span></h2>
         <ul>
             <li id="homeElement"><a href="index.php">Home</a></li>
-            <li><a href="#">Experience</a></li>
-            <li><a href="#">CV</a></li>
+            <li><a href="public/html/cv.html">CV</a></li>
             <li><a href="projects.php">Projects</a></li>
         </ul>
         <button id="navButton" onclick="location.href='public/html/contactpage.html'">Contact</button>
@@ -37,7 +36,9 @@ if (!isset($_SESSION['projects'])){
             <button class="contentButton" onclick="location.href='public/html/contactpage.html'">Get in contact</button>
         </div>
         <div class="welcomeDivRight">
-            <img alt="Photo of Nathan Geers" src="img/6606-male-user.png"/>
+            <div class="profileImageDiv">
+                <img alt="Photo of Nathan Geers" src="img/6606-male-user.png"/>
+            </div>
         </div>
     </div>
     <div class="sectionBio">
@@ -89,7 +90,7 @@ if (!isset($_SESSION['projects'])){
                     As I grew up, I believe I changed a lot. <br>
                     However, one thing remained a constant throughout the last years:<br>
                     Spending a lot of time behind a computer. <br>
-                    Whether it was through gaming, game development, editing or making videos or my recent curiosity and career choice towards software development.<br>
+                    Whether it was through gaming, game development, editing videos or my recent curiosity and career choice towards software development.<br>
                     On this website, I am excited to show you the projects that I've worked on. If you have any questions, be sure to contact me without hesitation!
                 </p>
                 <h4>"I would take curiosity over knowledge anytime." - Nathan Geers</h4>

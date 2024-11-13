@@ -16,6 +16,7 @@ form, .formText{
     justify-content: space-evenly;
     background: var(--main-color);
     width: 50%;
+    height: 80%;
 }
 .formText{
     display: flex;
@@ -77,11 +78,12 @@ input[type="submit"]:hover{
 }
 @media screen and (max-width: 950px) {
     .wrapper{
-        margin-top: 10rem;
+        margin-top: 5rem;
     }
     .formDiv{
         align-items: center;
         flex-direction: column;
+        height: 100%;
         width: 80%;
     }
     form, .formText{
