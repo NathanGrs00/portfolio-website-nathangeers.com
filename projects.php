@@ -37,7 +37,7 @@ $listProjects = new ProjectController();
                 <button class="hiddenButton contentButton" id="hiddenAdd" onclick="location.href='public/html/addprojects.html'">Add Projects</button>
                 <div>
                     <button class="hiddenButton contentButton" id="hiddenLogOut" onclick="location.href='logout.php'">Log Out</button>
-                    <button class="contentButton" onclick="location.href='public/html/passwordform.html'">Login</button>
+                    <button class="contentButton" id="shownButton" onclick="location.href='public/html/passwordform.html'">Login</button>
                 </div>
             </div>
         </div>

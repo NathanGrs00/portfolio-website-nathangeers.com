@@ -17,4 +17,8 @@ function toggleVisible() {
     if (third) {
         third.classList.toggle("hiddenButton");
     }
+    const fourth = document.getElementById("shownButton");
+    if (fourth){
+        fourth.style.display = "none";
+    }
 }

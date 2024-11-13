@@ -53,7 +53,7 @@ h1{
     display: none;
 }
 #hiddenLogOut{
-    margin-right: 1rem;
+    margin-right: 2rem;
     background-color: var(--background-color);
     color: var(--font-color);
 }
