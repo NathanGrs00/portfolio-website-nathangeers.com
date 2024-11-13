@@ -50,7 +50,7 @@ if (!$selectedProject){
             <div id="skillsBox">
                 <p>Skills: </p>
                 <div id="editSkills">
-                    <?php // Goes through each skill and checks the checkbox if it's in the usedSkills arrau.
+                    <?php // Goes through each skill and checks the checkbox if it's in the usedSkills array.
                     foreach ($allSkills as $skill){ ?>
                         <input type="checkbox" id="<?php echo $skill; ?>" name="checks[]" value="<?php echo $skill; ?>" <?php if (in_array($skill, $usedSkills)) echo 'checked'; ?>>
                         <label for="<?php echo $skill; ?>"><?php echo $skill; ?></label>

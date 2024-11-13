@@ -5,7 +5,7 @@
 .projectsMain{
     width: 80%;
     background-color: var(--main-color);
-    border-radius: 2%;
+    border-radius: 3rem;
     display: flex;
     justify-content: space-evenly;
     flex-direction: column;
@@ -53,7 +53,6 @@ h1{
     display: none;
 }
 #hiddenLogOut{
-    margin-right: 2rem;
     background-color: var(--background-color);
     color: var(--font-color);
 }
@@ -64,13 +63,44 @@ h1{
     }
     .featuredBlock{
         width: 80%;
+        height: 22rem;
     }
     .projectObject{
         flex-direction: column;
         align-items: center;
+        height: 40rem;
+    }
+    .skillsBox{
+        width: 50%;
     }
     .contentButton{
-        width: 5rem;
+        width: 6rem;
         font-size: .8rem;
+    }
+}
+@media screen and (max-width: 680px){
+    h1{
+        font-size: 1.1rem;
+    }
+    .projectObject{
+        height: 50rem;
+    }
+    .featuredBlock{
+        height: 40rem;
+    }
+    .blockText{
+        height: 40%;
+    }
+    .blockSkills{
+        height: 30rem;
+    }
+    .skillsBox{
+        height: 50rem;
+    }
+    .homeImage{
+        height: 10rem;
+    }
+    .skill{
+        font-size: 0.8rem;
     }
 }

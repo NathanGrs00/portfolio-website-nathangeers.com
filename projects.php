@@ -34,11 +34,9 @@ $listProjects = new ProjectController();
             <div class="addProjects">
                 <h2 onclick="location.href='index.php'" class="nameLogo, shownLogo" >Nathan<span>Geers</span></h2>
                 <h2 onclick="location.href='index.php'" class="nameLogo, hiddenLogo">N<span>G</span></h2>
-                <button class="hiddenButton contentButton" id="hiddenAdd" onclick="location.href='public/html/addprojects.html'">Add Projects</button>
-                <div>
-                    <button class="hiddenButton contentButton" id="hiddenLogOut" onclick="location.href='logout.php'">Log Out</button>
-                    <button class="contentButton" id="shownButton" onclick="location.href='public/html/passwordform.html'">Login</button>
-                </div>
+                <button class="hiddenButton contentButton" id="hiddenAdd" onclick="location.href='addprojects.php'">Add Projects</button>
+                <button class="hiddenButton contentButton" id="hiddenLogOut" onclick="location.href='logout.php'">Log Out</button>
+                <button class="contentButton" id="shownButton" onclick="location.href='public/html/passwordform.html'">Login</button>
             </div>
         </div>
     </div>
