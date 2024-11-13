@@ -7,7 +7,6 @@ body, #mainBlock{
 }
 .wrapper{
     flex-direction: column;
-    margin-top: 4rem;
 }
 #mainBlock, form, button, a{
     border-radius: 2rem;
@@ -122,6 +121,9 @@ a{
 }
 
 @media screen and (max-width: 666px){
+    #mainBlock{
+        width: 30rem;
+    }
     form{
         width: 20rem;
     }
@@ -139,7 +141,12 @@ a{
         min-width: 7rem;
     }
 }
+
 @media screen and (max-width: 450px){
+    #mainBlock{
+        margin-top: 6rem;
+        width: 20rem;
+    }
     form{
         width: 15rem;
     }

@@ -35,42 +35,43 @@ if (!$selectedProject){
 </head>
 <body>
     <div class="wrapper">
-        <h2>Edit a project</h2>
-        <form method="post" action="updateprojects.php" enctype="multipart/form-data">
-            <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
-            <label for="title">Title:</label>
-            <input type="text" name="title" id="title" value="<?php echo $project->getTitle(); ?>" required />
-
-            <label for="description">Description:</label>
-            <textarea name="description" id="description" maxlength="200" required><?php echo $project->getDescription(); ?></textarea>
-            <?php
-            // Retrieve skills used by this project as an array
-            $usedSkills = $project->getSkills();
-            ?>
-            <div id="skillsBox">
-                <p>Skills: </p>
-                <div id="editSkills">
-                    <?php // Goes through each skill and checks the checkbox if it's in the usedSkills array.
-                    foreach ($allSkills as $skill){ ?>
-                        <input type="checkbox" id="<?php echo $skill; ?>" name="checks[]" value="<?php echo $skill; ?>" <?php if (in_array($skill, $usedSkills)) echo 'checked'; ?>>
-                        <label for="<?php echo $skill; ?>"><?php echo $skill; ?></label>
-                    <?php }; ?>
+        <div id="mainBlock">
+            <h2>Edit a project</h2>
+            <form method="post" action="updateprojects.php" enctype="multipart/form-data">
+                <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
+                <label for="title">Title:</label>
+                <input type="text" name="title" id="title" value="<?php echo $project->getTitle(); ?>" required />
+                <label for="description">Description:</label>
+                <textarea name="description" id="description" maxlength="200" required><?php echo $project->getDescription(); ?></textarea>
+                <?php
+                // Retrieve skills used by this project as an array
+                $usedSkills = $project->getSkills();
+                ?>
+                <div id="skillsBox">
+                    <p>Skills: </p>
+                    <div id="editSkills">
+                        <?php // Goes through each skill and checks the checkbox if it's in the usedSkills array.
+                        foreach ($allSkills as $skill){ ?>
+                            <input type="checkbox" id="<?php echo $skill; ?>" name="checks[]" value="<?php echo $skill; ?>" <?php if (in_array($skill, $usedSkills)) echo 'checked'; ?>>
+                            <label for="<?php echo $skill; ?>"><?php echo $skill; ?></label>
+                        <?php }; ?>
+                    </div>
                 </div>
-            </div>
-            <div class="fileUpload">
-                <label for="image">
-                    <input type="file" id="image" name="image" accept="image/*">Upload Image
-                </label>
-            </div>
-            <div id="buttonDiv">
-                <button type="submit">Update Project</button>
-                <a id="goBackButton" onclick="location.href='projects.php'">Go Back</a>
-            </div>
-        </form>
-        <form method="post" action="deleteproject.php">
-            <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
-            <button type="submit" id="deleteButton" onclick="return confirm('Are you sure you want to delete this project?');">Delete Project</button>
-        </form>
+                <div class="fileUpload">
+                    <label for="image">
+                        <input type="file" id="image" name="image" accept="image/*">Upload Image
+                    </label>
+                </div>
+                <div id="buttonDiv">
+                    <button type="submit">Update Project</button>
+                    <a id="goBackButton" onclick="location.href='projects.php'">Go Back</a>
+                </div>
+            </form>
+            <form method="post" action="deleteproject.php">
+                <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
+                <button type="submit" id="deleteButton" onclick="return confirm('Are you sure you want to delete this project?');">Delete Project</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
