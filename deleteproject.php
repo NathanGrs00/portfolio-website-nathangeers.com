@@ -1,6 +1,6 @@
 <?php
-require_once 'project.class.php';
-require_once 'errorhandler.class.php';
+require_once 'classes/project.class.php';
+require_once 'classes/errorhandler.class.php';
 session_start();
 
 class ProjectRemover{

@@ -13,4 +13,8 @@ function toggleVisible() {
     if (second) {
         second.classList.toggle("hiddenButton");
     }
+    const third = document.getElementById("hiddenLogOut");
+    if (third) {
+        third.classList.toggle("hiddenButton");
+    }
 }

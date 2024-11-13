@@ -1,5 +1,5 @@
 <?php
-require_once 'errorhandler.class.php';
+require_once 'classes/errorhandler.class.php';
 class PasswordController{
     private $password;
 

@@ -44,12 +44,12 @@ p{
     margin-bottom: 4rem;
 }
 
-
 /*Input fields*/
 input, textarea{
     border-radius: .6rem;
     border: none;
     width: 98%;
+    color: var(--background-color);
 }
 input{
     height: 2rem;

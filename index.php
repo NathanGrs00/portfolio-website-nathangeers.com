@@ -1,7 +1,7 @@
 <?php
-require_once 'projectcontroller.class.php';
-require_once 'project.class.php';
-require_once 'displayrecentproject.class.php';
+require_once 'classes/projectcontroller.class.php';
+require_once 'classes/project.class.php';
+require_once 'classes/displayrecentproject.class.php';
 
 //If there is no projects array, make one.
 if (!isset($_SESSION['projects'])){

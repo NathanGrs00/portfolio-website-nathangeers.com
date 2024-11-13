@@ -41,7 +41,7 @@ h1{
     width: 90%;
     height: 10rem;
 }
-.addProjects > button {
+.contentButton{
     height: 3rem;
     width: 10rem;
     padding: 0;
@@ -52,10 +52,12 @@ h1{
 .hiddenButton{
     display: none;
 }
+#hiddenLogOut{
+    margin-right: 1rem;
+    background-color: var(--background-color);
+    color: var(--font-color);
+}
 @media screen and (max-width: 1320px) {
-    .projectsMain{
-
-    }
     .homeImage{
         width: clamp(10rem, 70%, 40rem);
         height: 20rem;
@@ -67,9 +69,8 @@ h1{
         flex-direction: column;
         align-items: center;
     }
-}
-@media screen and (max-width: 400px) {
-    .addProjects > h2{
-
+    .contentButton{
+        width: 5rem;
+        font-size: .8rem;
     }
 }

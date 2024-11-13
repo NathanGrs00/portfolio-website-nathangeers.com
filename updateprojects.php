@@ -1,7 +1,7 @@
 <?php
-require_once 'project.class.php';
-require_once 'errorhandler.class.php';
-require_once 'imagecontroller.class.php';
+require_once 'classes/project.class.php';
+require_once 'classes/errorhandler.class.php';
+require_once 'classes/imagecontroller.class.php';
 session_start();
 
 class ProjectUpdater{

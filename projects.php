@@ -1,5 +1,5 @@
 <?php
-require_once 'projectcontroller.class.php';
+require_once 'classes/projectcontroller.class.php';
 $listProjects = new ProjectController();
 ?>
 <!DOCTYPE html>
@@ -32,10 +32,13 @@ $listProjects = new ProjectController();
             $listProjects->showAllProjects();
             ?>
             <div class="addProjects">
-                <h2 onclick="location.href='index.php'" class="nameLogo, shownLogo" >Nathan <span>Geers</span></h2>
+                <h2 onclick="location.href='index.php'" class="nameLogo, shownLogo" >Nathan<span>Geers</span></h2>
                 <h2 onclick="location.href='index.php'" class="nameLogo, hiddenLogo">N<span>G</span></h2>
                 <button class="hiddenButton contentButton" id="hiddenAdd" onclick="location.href='public/html/addprojects.html'">Add Projects</button>
-                <button class="contentButton" onclick="location.href='public/html/passwordform.html'">Login</button>
+                <div>
+                    <button class="hiddenButton contentButton" id="hiddenLogOut" onclick="location.href='logout.php'">Log Out</button>
+                    <button class="contentButton" onclick="location.href='public/html/passwordform.html'">Login</button>
+                </div>
             </div>
         </div>
     </div>

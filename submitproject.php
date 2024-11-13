@@ -1,7 +1,7 @@
 <?php
-require_once 'formvalidator.class.php';
-require_once 'errorhandler.class.php';
-require_once 'projectcontroller.class.php';
+require_once 'classes/formvalidator.class.php';
+require_once 'classes/errorhandler.class.php';
+require_once 'classes/projectcontroller.class.php';
 
 session_start();
 

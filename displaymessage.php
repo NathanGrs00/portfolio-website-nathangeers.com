@@ -1,4 +1,4 @@
-<?php require_once 'errorhandler.class.php';
+<?php require_once 'classes/errorhandler.class.php';
 ?>
 <!doctype html>
 <html lang="en">
