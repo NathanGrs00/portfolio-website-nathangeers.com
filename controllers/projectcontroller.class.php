@@ -1,7 +1,7 @@
 <?php
 require_once 'classes/projectvisual.class.php';
 require_once 'classes/project.class.php';
-require_once 'classes/imagecontroller.class.php';
+require_once 'classes/imageupload.class.php';
 class ProjectController{
     public function newProjectList(){
         //Makes an array and hard-codes

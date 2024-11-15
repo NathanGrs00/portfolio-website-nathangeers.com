@@ -3,8 +3,6 @@ require_once 'classes/formvalidator.class.php';
 require_once 'classes/errorhandler.class.php';
 require_once 'controllers/projectcontroller.class.php';
 
-session_start();
-
 $errorMessage = new ErrorHandler();
 $isValid = new FormValidator();
 $newProject = new ProjectController();

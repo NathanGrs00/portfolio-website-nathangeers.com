@@ -14,7 +14,7 @@ $allSkills = ['HTML', 'PHP', 'CSS', 'JavaScript', 'Python', 'Java', 'SQL', 'C#',
     <div class="wrapper">
         <div id="mainBlock">
             <h2>Add a project</h2>
-            <form action="submitproject.php" method="POST" enctype="multipart/form-data">
+            <form action="processaddproject.php" method="POST" enctype="multipart/form-data">
                 <label for="title">Title: </label><input type="text" id="title" name="title" required>
                 <label for="description">Description: </label><textarea id="description" name="description" maxlength="200" required></textarea>
                 <div id="skillsBox">
