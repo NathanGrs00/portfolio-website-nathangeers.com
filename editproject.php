@@ -30,14 +30,15 @@ if (!$selectedProject){
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Edit project | Nathan Geers</title>
     <link rel="stylesheet" href="public/css/mutateproject.css"
 </head>
 <body>
     <div class="wrapper">
         <div id="mainBlock">
             <h2>Edit a project</h2>
-            <form method="post" action="updateprojects.php" enctype="multipart/form-data">
+            <form method="post" action="processmutateproject.php" enctype="multipart/form-data">
+                <input type="hidden" name="functionChoice" value="edit">
                 <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
                 <label for="title">Title:</label>
                 <input type="text" name="title" id="title" value="<?php echo $project->getTitle(); ?>" required />
@@ -67,7 +68,8 @@ if (!$selectedProject){
                     <a id="goBackButton" onclick="location.href='projects.php'">Go Back</a>
                 </div>
             </form>
-            <form method="post" action="deleteproject.php">
+            <form method="post" action="processmutateproject.php">
+                <input type="hidden" name="functionChoice" value="delete">
                 <input type="hidden" name="projectID" value="<?php echo $project->getId(); ?>" />
                 <button type="submit" id="deleteButton" onclick="return confirm('Are you sure you want to delete this project?');">Delete Project</button>
             </form>

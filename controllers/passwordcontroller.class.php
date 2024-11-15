@@ -6,15 +6,15 @@ class PasswordController{
     public function __construct($password){
         //Storing the parameter in a private variable.
         $this->password = $password;
-        $this->checkEmpty();
     }
     public function checkEmpty(){
         //Checking if password is empty. If it is, throw an error.
         if(!empty($this->password)){
-            $this->checkPassword();
+            return True;
         }else{
             $errorMessage = new ErrorHandler();
             $errorMessage->showError("Please enter a password.");
+            exit();
         }
     }
     public function checkPassword(){
@@ -25,14 +25,13 @@ class PasswordController{
         if (password_verify($this->password, $storedPasswordHash)){
             //If so, set a session variable to true. This gets used for displaying the edit and add buttons.
             $_SESSION['correctPassword'] = true;
-            header('Location: projects.php');
-            exit();
+            return True;
         }else{
             // If not, throw an error.
             $errorMessage = new ErrorHandler();
             $errorMessage->showError("Wrong password.");
+            exit();
         }
     }
 }
-//Initiates the class, because this page gets visited through
-$initiate = new PasswordController($_POST['password']);
+

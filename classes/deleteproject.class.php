@@ -1,7 +1,6 @@
 <?php
-require_once 'classes/project.class.php';
-require_once 'classes/errorhandler.class.php';
-session_start();
+require_once 'project.class.php';
+require_once 'errorhandler.class.php';
 
 class ProjectRemover{
     function __construct(){
@@ -11,7 +10,6 @@ class ProjectRemover{
             $errorMessage->showError("Project ID is missing.");
             exit();
         }
-        $this->deleteProject();
     }
 
     public function deleteProject(){
@@ -26,9 +24,5 @@ class ProjectRemover{
                 break;
             }
         }
-        header("Location: projects.php");
-        exit();
     }
 }
-// Initiating, because the code gets here through a form.
-$initiate = new ProjectRemover();

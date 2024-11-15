@@ -1,5 +1,5 @@
 <?php
-require_once 'classes/projectcontroller.class.php';
+require_once 'controllers/projectcontroller.class.php';
 require_once 'classes/project.class.php';
 require_once 'classes/displayrecentproject.class.php';
 

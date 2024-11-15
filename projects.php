@@ -1,5 +1,5 @@
 <?php
-require_once 'classes/projectcontroller.class.php';
+require_once 'controllers/projectcontroller.class.php';
 $listProjects = new ProjectController();
 ?>
 <!DOCTYPE html>

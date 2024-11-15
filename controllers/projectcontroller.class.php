@@ -1,7 +1,7 @@
 <?php
-require_once 'projectvisual.class.php';
-require_once 'project.class.php';
-require_once 'imagecontroller.class.php';
+require_once 'classes/projectvisual.class.php';
+require_once 'classes/project.class.php';
+require_once 'classes/imagecontroller.class.php';
 class ProjectController{
     public function newProjectList(){
         //Makes an array and hard-codes
@@ -19,7 +19,7 @@ class ProjectController{
     public function addProject(){
         $imageUploader = new ImageController();
         //ID is the current amount of projects + 1
-        $id = count($_SESSION['projects']) + 1;
+        $id = (count($_SESSION['projects']) + 1);
         $destinationPath = $imageUploader->ImageUploader();
 
         //Makes a new project and adds it to the project array.
