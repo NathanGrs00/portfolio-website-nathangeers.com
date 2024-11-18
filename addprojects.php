@@ -20,7 +20,7 @@ $allSkills = ['HTML', 'PHP', 'CSS', 'JavaScript', 'Python', 'Java', 'SQL', 'C#',
                 <div id="skillsBox">
                     <p>Skills: </p>
                     <div id="editSkills">
-                        <?php // Goes through each skill and checks the checkbox if it's in the usedSkills array.
+                        <?php // Goes through each skill and prints the checkboxes.
                         foreach ($allSkills as $skill){ ?>
                             <input type="checkbox" id="<?php echo $skill; ?>" name="checks[]" value="<?php echo $skill; ?>">
                             <label for="<?php echo $skill; ?>"><?php echo $skill; ?></label>

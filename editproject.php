@@ -55,7 +55,7 @@ if (!$selectedProject){
                         foreach ($allSkills as $skill){ ?>
                             <input type="checkbox" id="<?php echo $skill; ?>" name="checks[]" value="<?php echo $skill; ?>" <?php if (in_array($skill, $usedSkills)) echo 'checked'; ?>>
                             <label for="<?php echo $skill; ?>"><?php echo $skill; ?></label>
-                        <?php }; ?>
+                        <?php } ?>
                     </div>
                 </div>
                 <div class="fileUpload">
