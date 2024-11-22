@@ -37,7 +37,7 @@ if (!isset($_SESSION['projects'])){
         </div>
         <div class="welcomeDivRight">
             <div class="profileImageDiv">
-                <img alt="Photo of Nathan Geers" src="img/6606-male-user.png"/>
+                <img alt="Photo of Nathan Geers" src="img/NathanGeersPhoto.png"/>
             </div>
         </div>
     </div>
