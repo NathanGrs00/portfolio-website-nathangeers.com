@@ -37,6 +37,6 @@ The given information is now send to the owner of the website.
 
 ## Contact
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+Project Link: [https://github.com/your_username/repo_name](https://github.com/NathanGrs00/portfolio-website-nathangeers.com)
 
 Send an email to nathangeers2@gmail.com or fill in the form on my website 😉
