@@ -3,6 +3,8 @@
 This portfolio website project allows the user to read the owner's listed projects and contact the owner through a form on a contactpage.
 The owner of the website can enter a password and has the ability to add, edit and delete projects. This is done through session variables, which means the mutations are not permanent.
 
+![Image](https://github.com/user-attachments/assets/a5a60b10-5961-4681-8426-6dbc01ff7525)
+
 ## Getting Started
 
 The website can be visited through opening a browser and submitting nathangeers.com as the URL.
